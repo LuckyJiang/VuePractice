@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="710ca6cb-af61-4e5f-b2d9-83fb408b6650" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qN57ZDStevr6akK2s0wCtIUWFa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/JAVA/project/SimPSOServer" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\share\13-Vuejs\Day 04\课堂代码\LearnVuejs04\10-组件化开发" />
+      <recent name="F:\share\13-Vuejs\Day 03\课堂代码\LearnVuejs03\10-组件化开发" />
+      <recent name="F:\share\13-Vuejs\Day 02\课堂代码\LearnVuejs02\08-书籍购物车案例" />
+      <recent name="F:\share\13-Vuejs\Day 02\课堂代码\LearnVuejs02\06-条件判断" />
+      <recent name="F:\share\13-Vuejs\Day 02\课堂代码\LearnVuejs02\00-ES6补充" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="710ca6cb-af61-4e5f-b2d9-83fb408b6650" name="Default Changelist" comment="" />
+      <created>1545099458375</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545099458375</updated>
+      <workItem from="1545099464206" duration="17830000" />
+      <workItem from="1545267276384" duration="23718000" />
+      <workItem from="1545353673272" duration="20803000" />
+      <workItem from="1545384475555" duration="1548000" />
+      <workItem from="1545613081822" duration="17058000" />
+      <workItem from="1616907041978" duration="12226000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="444" y="109" key="FileChooserDialogImpl" timestamp="1616907533094">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="444" y="109" key="FileChooserDialogImpl/0.0.1326.706@0.0.1326.706" timestamp="1616907533094" />
+    <state x="277" y="54" width="771" height="598" key="find.popup" timestamp="1616926998980">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="277" y="54" width="771" height="598" key="find.popup/0.0.1326.706@0.0.1326.706" timestamp="1616926998980" />
+  </component>
+</project>

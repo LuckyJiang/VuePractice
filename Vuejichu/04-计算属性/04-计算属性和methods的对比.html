@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <!--1.直接拼接: 语法过于繁琐-->
+  <h2>{{firstName}} {{lastName}}</h2>
+
+  <!--2.通过定义methods-->
+  <!--<h2>{{getFullName()}}</h2>-->
+  <!--<h2>{{getFullName()}}</h2>-->
+  <!--<h2>{{getFullName()}}</h2>-->
+  <!--<h2>{{getFullName()}}</h2>-->
+
+  <!--3.通过computed-->
+  <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+
+  /**
+   * 计算属性具有缓存性
+   *  如果data没有发生改变，调用几次method方法，久执行了四次；
+   *  但是如果data没有发生改变，无论调用了几次计算属性，
+   *      只要data值没有发生改变，则计算属性只执行一次，并对结果进行了缓存。性能高
+   */
+  const app = new Vue({
+    el: '#app',
+    data: {
+      firstName: 'Kobe',
+      lastName: 'Bryant'
+    },
+    methods: {
+      getFullName: function () {
+        console.log('getFullName');
+        return this.firstName + ' ' + this.lastName
+      }
+    },
+    computed: {
+      fullName: function () {
+        console.log('fullName');
+        return this.firstName + ' ' + this.lastName
+      }
+    }
+  })
+
+</script>
+
+</body>
+</html>
