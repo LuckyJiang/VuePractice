@@ -32,6 +32,11 @@
 <script>
 
   // 1.注册一个全局组件
+  /**
+   * 分离方法一：通过script标签，且type必须为text/x-template 并且 script的id要一致
+   *      <script type="text/x-template" id="cpn">
+   * 分离方法二：模板放在一个template标签中，并且设置id一致
+   */
   Vue.component('cpn', {
     template: '#cpn'
   })
