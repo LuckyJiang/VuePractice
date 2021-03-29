@@ -20,6 +20,7 @@
   </div>
 </div>
 
+<!--浏览器不能识别该标签-->
 <my-cpn></my-cpn>
 
 <script src="../js/vue.js"></script>
@@ -31,7 +32,7 @@
      *      template：模板，要显示的HTML
      *    }
      * 2、注册组件
-     * 3、使用组件
+     * 3、使用组件 ： 必须放到Vue的实例中，才可以使用自定义的组件，否则浏览器不能识别
 	 */
   // 1.extend：创建组件构造器对象
   const cpnC = Vue.extend({
