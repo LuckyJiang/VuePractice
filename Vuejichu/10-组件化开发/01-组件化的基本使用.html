@@ -24,7 +24,16 @@
 
 <script src="../js/vue.js"></script>
 <script>
-  // 1.创建组件构造器对象
+	/**
+     * 注册组件的基本步骤：
+     * 1、创建组件构造器
+     *    {
+     *      template：模板，要显示的HTML
+     *    }
+     * 2、注册组件
+     * 3、使用组件
+	 */
+  // 1.extend：创建组件构造器对象
   const cpnC = Vue.extend({
     template: `
       <div>
@@ -34,8 +43,9 @@
       </div>`
   })
 
-  // 2.注册组件
+  // 2.component：注册组件 ，第一个参数为组件的标签名
   Vue.component('my-cpn', cpnC)
+    //3.使用组件： <my-cpn></my-cpn>
 
   const app = new Vue({
     el: '#app',
