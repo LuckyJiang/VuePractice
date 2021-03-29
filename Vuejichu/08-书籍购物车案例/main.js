@@ -71,7 +71,7 @@ const app = new Vue({
       // }
       // return totalPrice
 
-      //
+      //高阶函数
       return this.books.reduce(function (preValue, book) {
         return preValue + book.price * book.count
       }, 0)
