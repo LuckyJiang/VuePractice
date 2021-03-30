@@ -13,6 +13,7 @@
   <my-cpn></my-cpn>
   <y-cpn></y-cpn>
 
+  <!--通过ref给某一个子组件绑定一个特定的ID-->
   <cpn ref="aaa"></cpn>
   <button @click="btnClick">按钮</button>
 </div>
@@ -22,6 +23,17 @@
 </template>
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * 父组件通过对象直接访问子组件
+   *    父组件访问子组件：使用$children或$refs
+   *    $children:
+   *        this.$children是一个数组类型，它包含所有子组件对象。
+   *    $refs的使用：$refs和ref指令通常是一起使用的。
+   *        首先，我们通过ref给某一个子组件绑定一个特定的ID。
+   *        其次，通过this.$refs.ID就可以访问到该组件了。
+
+   * 子组件访问父组件，使用$parent
+   */
   const app = new Vue({
     el: '#app',
     data: {
@@ -29,15 +41,16 @@
     },
     methods: {
       btnClick() {
-        // 1.$children
+        // 1.$children  this.$children是一个数组类型，它包含所有子组件对象,注意是组件对象
         // console.log(this.$children);
         // for (let c of this.$children) {
         //   console.log(c.name);
-        //   c.showMessage();
+        //   c.showMessage(); //调用组件的方法
         // }
-        // console.log(this.$children[3].name);
+        // console.log(this.$children[3].name); //调用组件的某个属性数据
 
-        // 2.$refs => 对象类型, 默认是一个空的对象 ref='bbb'
+        // 2.$refs => 对象类型, this.$refs默认是一个空的对象
+        // 父组件中，在引入子组件的时候，设置属性：ref='aaa'
         console.log(this.$refs.aaa.name);
       }
     },

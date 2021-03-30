@@ -29,11 +29,13 @@
   Vue.component('cpn', {
     template: '#cpn',
     // data() {
+    //   //所有组件获取到的数据是不同的
     //   return {
     //     counter: 0
     //   }
     // },
     data() {
+      //如果返回的数据为一个对象，并且该对象是同一个，则所有的组件共享这个对象
       return obj
     },
     methods: {

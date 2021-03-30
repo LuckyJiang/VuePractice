@@ -31,7 +31,11 @@
 <script src="../js/vue.js"></script>
 <script>
 
-  // 1.注册一个全局组件
+  /**
+   *  1.注册一个全局组件
+   *   组件应该有自己保存数据的地方
+   *   data(){}:  必须为方法;该方法定义的数据是组件自己的属性数据
+   */
   Vue.component('cpn', {
     template: '#cpn',
     data() {
@@ -45,7 +49,7 @@
     el: '#app',
     data: {
       message: '你好啊',
-      // title: '我是标题'
+      // title: '我是标题'   //子组件内部的不能访问通过{{title}}的形式访问vue实例的数据
     }
   })
 </script>
