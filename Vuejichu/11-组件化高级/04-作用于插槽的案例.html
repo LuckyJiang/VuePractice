@@ -31,7 +31,7 @@
 
 <template id="cpn">
   <div>
-    <!--slot :data="pLanguages"方式，将子组件中的数据传给父组件使用-->
+    <!--slot :data="pLanguages"方式，将子组件中的数据传给父组件使用，注意这里data是自定义的，可以为任何变量名-->
     <slot :data="pLanguages">
       <ul>
         <li v-for="item in pLanguages">{{item}}</li>
