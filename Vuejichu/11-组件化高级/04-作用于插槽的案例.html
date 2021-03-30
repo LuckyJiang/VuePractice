@@ -12,7 +12,7 @@
   <cpn>
     <!--目的是获取子组件中的pLanguages,然后在父组件中进行展示-->
     <!--2.5.0之前必须用template标签，之后版本可以用任意标签-->
-    <!--通过template拿到slot中传过来的数据“slot :data="pLanguages"”-->
+    <!--通过template拿到slot对象，然后通过slot.data拿到传过来的数据“slot :data="pLanguages"”-->
     <template slot-scope="slot">
       <!--<span v-for="item in slot.data"> - {{item}}</span>-->
       <span>{{slot.data.join(' - ')}}</span>
