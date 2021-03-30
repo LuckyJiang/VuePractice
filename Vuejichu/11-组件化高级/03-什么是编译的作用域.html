@@ -7,7 +7,9 @@
 <body>
 
 <div id="app">
+  <!--使用的是父组件的属性-->
   <cpn v-show="isShow"></cpn>
+
   <cpn v-for="item in names"></cpn>
 </div>
 
@@ -15,6 +17,7 @@
   <div>
     <h2>我是子组件</h2>
     <p>我是内容, 哈哈哈</p>
+    <!--使用的是子组件的属性-->
     <button v-show="isShow">按钮</button>
   </div>
 </template>
