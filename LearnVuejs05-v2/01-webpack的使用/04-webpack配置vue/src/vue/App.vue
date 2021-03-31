@@ -30,6 +30,7 @@
 </script>
 
 <style scoped>
+  /*样式*/
   .title {
     color: green;
   }

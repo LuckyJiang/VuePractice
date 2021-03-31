@@ -20,11 +20,18 @@ document.writeln('<h2>你好啊,李银河!</h2>')
 
 // 5.使用Vue进行开发
 import Vue from 'vue'
-// import App from './vue/app'
-import App from './vue/App.vue'
+// 以下两个App都可以
+// import App from './vue/app'   //app.js中模板和js代码未分离
+import App from './vue/App.vue'  //模板和js代码未分离
 
+/**
+ * el 与template的区别？
+ * el：用于和index.html中的#app进行绑定
+ * tempalte:tempalte中的东西，会将el，即：#app，包括#app本身和#app中的内容，全部替换，之后就没有#app了
+ */
 new Vue({
   el: '#app',
+  //在tempalte中使用以下自己定义的app组件：<App/>
   template: '<App/>',
   components: {
     App

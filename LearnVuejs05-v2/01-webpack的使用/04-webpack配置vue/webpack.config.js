@@ -41,6 +41,7 @@ module.exports = {
         ]
       },
       {
+        //es6转es5
         test: /\.js$/,
         // exclude: 排除
         // include: 包含
@@ -53,14 +54,17 @@ module.exports = {
         }
       },
       {
+        //用于加载.vue后缀文件，
+        //在package.json 引入依赖：vue-template-compiler
         test: /\.vue$/,
         use: ['vue-loader']
       }
     ]
   },
   resolve: {
-    // alias: 别名
+    //import 或者require的时候，省略文件后缀名
     extensions: ['.js', '.css', '.vue'],
+    // alias: 别名
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     }

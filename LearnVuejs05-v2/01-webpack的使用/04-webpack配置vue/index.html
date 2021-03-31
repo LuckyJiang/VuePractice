@@ -10,5 +10,41 @@
 </div>
 
 <script src="./dist/bundle.js"></script>
+<script >
+  /**
+   *============================================= 集成Vue
+   *
+   * 第一步：需要引入依赖包
+   *     //在package.json 引入依赖：vue-template-compiler进行vue编译
+   *     "dependencies": {
+   *        "vue": "^2.5.21"
+   *     }
+   *
+   *第二步：进行下面的配置
+   * runtime-only 版本：代码中，不可以有任何的template;解决方案:
+   *    在webpack.config.js中配置：
+   *      resolve: {
+   *        //import 或者require的时候，省略文件后缀名
+   *        extensions: ['.js', '.css', '.vue'],
+   *        // alias: 别名
+   *        //解决不可以有任何的template问题：
+   *        alias: {
+   *          'vue$': 'vue/dist/vue.esm.js'
+   *        }
+   *      }
+   * runtime-compiler 版本：代码中，可以有template,因为有compiler可以用于编译template.
+   *
+   * 第三步：配置加载vue文件
+   *    webpackage.config.js--module---rules:
+   *      {
+   *          {
+   *            //用于加载.vue后缀文件，
+   *            //在package.json 引入依赖：vue-template-compiler
+   *            test: /\.vue$/,
+   *            use: ['vue-loader']
+   *            }
+   *      }
+   */
+</script>
 </body>
 </html>
