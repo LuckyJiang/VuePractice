@@ -10,7 +10,7 @@ if (flag) {
   console.log(sum(20, 30));
 }
 
-// 1.导出方式一:
+// 1.导出方式一:字面量增强
 export {
   flag, sum
 }
@@ -32,15 +32,17 @@ export class Person {
 }
 
 // 5.export default
+
 // const address = '北京市'
 // export {
-//   address
+// //   address
 // }
 // export const address = '北京市'
 // const address = '北京市'
 //
 // export default address
 
+// 注意如果导入export default 导出的变量，则用户定义的变量名不需要和导出的一致，可以自定义
 export default function (argument) {
   console.log(argument);
 }

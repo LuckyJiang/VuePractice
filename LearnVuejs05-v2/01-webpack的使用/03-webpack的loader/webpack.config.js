@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: 'dist/'
+    publicPath: 'dist/'   //后期只要碰到url，就会自动拼接dist;比如： background: url("../img/timg.jpg");
   },
   module: {
     rules: [
@@ -18,6 +18,7 @@ module.exports = {
       },
       {
         test: /\.less$/,
+        //顺序不能变
         use: [{
           loader: "style-loader", // creates style nodes from JS strings
         }, {
@@ -41,6 +42,7 @@ module.exports = {
         ]
       },
       {
+        //将es6转换为es5,使用babel
         test: /\.js$/,
         // exclude: 排除
         // include: 包含
