@@ -1,3 +1,4 @@
+//app.js中模板和js代码未分离
 export default {
   template:  `
   <div>

@@ -69,10 +69,13 @@ module.exports = {
     }
   },
   plugins: [
+      //插件1：为打包的文件添加版权声明
       new webpack.BannerPlugin('最终版权归aaa所有'),
+      //插件2：将指定的index.html文件打包到dist文件夹中，并将编译后的bundle。js通过script标签的形式，加入到了html中
       new HtmlWebpackPlugin({
         template: 'index.html'
       }),
+      //插件3：对js文件进行压缩处理
       new UglifyjsWebpackPlugin()
   ],
   devServer: {

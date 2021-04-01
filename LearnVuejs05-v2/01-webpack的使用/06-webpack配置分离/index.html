@@ -7,6 +7,27 @@
 <body>
 
 <div id="app"></div>
-
+<script>
+  /**
+   * 搭建本地服务器：热部署：实现我们想要的让浏览器自动刷新显示我们修改后的结果：
+   * 第一步：安装组件：webpack-dev-server@2.9.1
+   * 第二步：webpack.config.js文件配置修改如下: 只在开发阶段会用到的配置
+   *    devServer: {
+   *      contentBase: './dist',    // 为哪一个文件夹提供本地服务，默认是根文件夹，我们这里要填写./dist
+   *      inline: true             //页面实时刷新
+   *      //port：端口号
+   *    }
+   *第三步：在package.json配置：在script中配置：
+   *    "dev": "webpack-dev-server"    //需要自己去浏览器打开指定网址
+   *    "dev": "webpack-dev-server --open"   //浏览器自动打开页面
+   *    "dev": "webpack-dev-server --open --config ./build/dev.config.js"
+   *    之后：npm run dev
+   *
+   * 之前是只有一个webpack.config.js，现在对该文件进行分离，在一个build文件夹：
+   * base.config.js:公共配置
+   * dev.config.js:只在开发阶段会用到的配置
+   * prod.config.js:发布之后会用到的配置文件
+   */
+</script>
 </body>
 </html>
