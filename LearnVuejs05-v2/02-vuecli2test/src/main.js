@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 
+
+/**
+ * Vue cli：脚手架
+ */
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
