@@ -16,7 +16,7 @@
       <!--档案</router-link>-->
     <button @click="userClick">用户</button>
     <button @click="profileClick">档案</button>
-
+    <!--正则表达式不能加上空格-->
     <keep-alive exclude="Profile,User">
       <router-view/>
     </keep-alive>
