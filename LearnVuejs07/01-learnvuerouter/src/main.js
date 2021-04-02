@@ -36,7 +36,9 @@ new Vue({
  * 4、懒加载形式：
  *    在ES6中, 我们可以有更加简单的写法来组织Vue异步组件和Webpack的代码分割.
  *    const Home = () => import('../components/Home.vue')
- *
+ */
+
+/**
  * 5、vuerouter-参数传递：
  *    传递参数主要有两种类型: params和query
  *    params的类型:
@@ -74,7 +76,24 @@ new Vue({
       <h2>{{$route.params.abc}}</h2>
       <h2>{{$route.query.age}}</h2>
 
- *6、$route和$router是有区别的？？？
+ */
+
+/**
+ * *6、$route和$router是有区别的？？？
  *    $router为VueRouter实例，想要导航到不同URL，则使用$router.push方法
  *    $route为当前router跳转对象里面可以获取name、path、query、params等
+ */
+
+
+/**
+ * 7、什么是导航守卫?
+ *      vue-router提供的导航守卫主要用来监听监听路由的进入和离开的.
+ *      vue-router提供了beforeEach和afterEach的钩子函数, 它们会在路由即将改变前和改变后触发.
+ *      请参考index.js中的应用
+ *
+ *      导航钩子的三个参数解析:
+ *      to: 即将要进入的目标的路由对象.
+ *      from: 当前导航即将要离开的路由对象.
+ *      next: 调用该方法后, 才能进入下一个钩子.
+
  */

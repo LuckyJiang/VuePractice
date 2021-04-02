@@ -83,12 +83,23 @@ const router = new VueRouter({
   linkActiveClass: 'active'
 })
 
+/**
+ *  导航守卫
+ *  导航钩子的三个参数解析:
+ *  to: 即将要进入的目标的路由对象.
+ *  from: 当前导航即将要离开的路由对象.
+ *  next: 调用该方法后, 才能进入下一个钩子.
+ */
+
 // 前置守卫(guard)
 router.beforeEach((to, from, next) => {
   // 从from跳转到to
+  //功能目的：每个路由对应一个组件，每个组件对应的title不一致，当切换路由的时候，修改title
   document.title = to.matched[0].meta.title
+  // document.title = to.meta.title   //一般用上面的方法，用这个方法，首页一般获取不到名字
   // console.log(to);
   // console.log('++++');
+  //在beforeEach中必须调用next（）方法，才能进入下一个钩子
   next()
 })
 
