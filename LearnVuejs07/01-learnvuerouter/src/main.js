@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 // Vue.prototype.test = function () {
 //   console.log('test');
 // }
-// Vue.prototype.name = "coderwhy"
+Vue.prototype.name = "coderwhy"
 
 new Vue({
   el: '#app',
@@ -20,7 +20,7 @@ new Vue({
 // const obj = {
 //   name: 'why'
 // }
-//
+//给obj添加了一个内部属性，key为age,value为18；
 // Object.defineProperty(obj, 'age', 18)
 
 /**

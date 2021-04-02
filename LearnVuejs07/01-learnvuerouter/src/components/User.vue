@@ -38,6 +38,8 @@
         console.log(this.$router);
         console.log(this.$route);
 
+        //这里打印的是“coderwhy”，因为在main.js中给Vue原型定义了一个name属性：Vue.prototype.name = "coderwhy"
+        //而所有的组件都继承自Vue类的原型，也就拥有了name属性，这个name属性覆盖了组件本身的name属性，因此打印“codeerwhy"
         console.log(this.name);
       }
     }
