@@ -2,10 +2,12 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 
+//引入组件方式1：所有组价放入到一个js中
 // import Home from '../components/Home'
 // import About from '../components/About'
 // import User from '../components/User'
 
+//引入组件方式2：路由懒加载代码： const Home = () => import('../components/Home')
 const Home = () => import('../components/Home')
 const HomeNews = () => import('../components/HomeNews')
 const HomeMessage = () => import('../components/HomeMessage')
@@ -17,7 +19,7 @@ const Profile = () => import('../components/Profile')
 // 1.通过Vue.use(插件), 安装插件
 Vue.use(VueRouter)
 
-// 2.创建VueRouter对象
+// 2.配置路由和组件之间的应用关系
 const routes = [
   {
     path: '',
@@ -25,6 +27,7 @@ const routes = [
     redirect: '/home'
   },
   {
+    //路由嵌套：/home/news 或者 /home/message
     path: '/home',
     component: Home,
     meta: {
@@ -71,6 +74,8 @@ const routes = [
     },
   }
 ]
+
+// 创建VueRouter对象
 const router = new VueRouter({
   // 配置路由和组件之间的应用关系
   routes,
