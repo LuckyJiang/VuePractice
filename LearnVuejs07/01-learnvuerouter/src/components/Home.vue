@@ -29,13 +29,18 @@
     },
     // 这两个函数, 只有该组件被保持了状态使用了keep-alive时, 才是有效的
     activated() {
+      //保持状态第一步：用keep-alive 包围<router-view/>
+      //保持状态第二步：
+      //当前组件处于活跃状态的时候，会触发activated函数
       this.$router.push(this.path);
       console.log('activated');
     },
     deactivated() {
+      //当前组件不活跃的时候，会触发deactivated函数
       console.log('deactivated');
     },
     beforeRouteLeave (to, from, next) {
+      //保持状态第三步：
       console.log(this.$route.path);
       this.path = this.$route.path;
       next()
