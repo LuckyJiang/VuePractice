@@ -10,7 +10,7 @@
   // 请求一:
   let isResult1 = false
   let isResult2 = false
-  $ajax({
+  /*$ajax({
     url: '',
     success: function () {
       console.log('结果1');
@@ -26,7 +26,7 @@
       isResult2 = true
       handleResult()
     }
-  })
+  })*/
 
   function handleResult() {
     if (isResult1 && isResult2) {
@@ -63,7 +63,7 @@
   //   console.log(err);
   // })
 
-  // new Promise(resolve => resolve(结果))简写
+  // 优化1：new Promise(resolve => resolve(结果))简写
   new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('aaa')
@@ -82,7 +82,7 @@
     console.log(res, '第三层的10行处理代码');
   })
 
-  // 省略掉Promise.resolve
+  // 优化2：省略掉Promise.resolve
   new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('aaa')

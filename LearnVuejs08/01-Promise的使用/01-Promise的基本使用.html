@@ -7,14 +7,21 @@
 <body>
 
 <script>
+  /**
+   *   Promise是异步编程的一种解决方案
+   *
+   *   Promise 的使用形式一：
+   *     执行resolve时，会回调.then()
+   *     执行reject时，会回调.catch()
+   */
   // 1.使用setTimeout
   // setTimeout(() => {
   //   console.log('Hello World');
   // }, 1000)
 
-  // 什么情况下会用到Promise?
+  // 2、什么情况下会用到Promise?
   // 一般情况下是有异步操作时,使用Promise对这个异步操作进行封装
-  // new -> 构造函数(1.保存了一些状态信息  2.执行传入的函数)
+  // new -> 构造函数,构造函数中会1.保存了一些状态信息  2.执行传入的函数
   // 在执行传入的回调函数时, 会传入两个参数, resolve, reject.本身又是函数
   new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -33,6 +40,23 @@
     console.log(data);
   }).catch((err) => {
     console.log(err);
+  })
+
+  new Promise(((resolve, reject) => {
+    setTimeout( () =>{
+      // resolve("promise");  // promise then1  ; promise then2
+      reject("promise")   //promise faile1;
+    },1000)
+  })).then( data=>{
+    console.log(data + " then1");
+    return data + " then1"
+  }).then(data=>{
+    console.log(data +" then2");
+    return data + " then2";
+  }).catch(data=>{
+    console.log(data + " faile1");
+  }).catch(data=>{
+    console.log(data + " faile2");
   })
 </script>
 </body>

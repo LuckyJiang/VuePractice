@@ -7,6 +7,13 @@
 <body>
 
 <script>
+
+  /**
+   *
+   *   Promise 的使用形式二：
+   *     执行resolve时，会回调.then()中的 data=>{}
+   *     执行reject时，会回调.catch()中的 err=>{}
+   */
   new Promise((resolve, reject) => {
     setTimeout(() => {
       // resolve('Hello Vuejs')
