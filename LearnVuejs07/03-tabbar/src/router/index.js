@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+// 懒加载形式：在ES6中, 我们可以有更加简单的写法来组织Vue异步组件和Webpack的代码分割.
 const Home = () => import('../views/home/Home')
 const Category = () => import('../views/category/Category')
 const Cart = () => import('../views/cart/Cart')
