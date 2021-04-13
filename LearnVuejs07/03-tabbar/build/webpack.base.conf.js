@@ -23,7 +23,9 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
+    //导入文件如果包含以下三个文件后缀的扩展，则表示可是将其省略
     extensions: ['.js', '.vue', '.json'],
+    //对文件夹路径去一个别名
     alias: {
       '@': resolve('src'),
       'assets': resolve('src/assets'),

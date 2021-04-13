@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+
+  /**
+   *
+   *   Promise 的使用形式二：
+   *     执行resolve时，会回调.then()中的 data=>{}
+   *     执行reject时，会回调.catch()中的 err=>{}
+   */
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // resolve('Hello Vuejs')
+      reject('error message')
+    }, 1000)
+  }).then(data => {
+    console.log(data);
+  }, err => {
+    console.log(err);
+  })
+</script>
+</body>
+</html>
