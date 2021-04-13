@@ -12,7 +12,7 @@
     <h2>{{$store.state.info}}</h2>
     <button @click="updateInfo">修改信息</button>
 
-    <h2>----------App内容----------</h2>
+    <h2>----------App内容：在APP组件中，去调用vuex中的mutations方式----------</h2>
     <h2>{{$store.state.counter}}</h2>
     <button @click="addition">+</button>
     <button @click="subtraction">-</button>
@@ -27,6 +27,7 @@
     <h2>{{$store.getters.moreAgeStu(12)}}</h2>
 
     <h2>----------Hello Vuex内容----------</h2>
+    <!--显示子组件-->
     <hello-vuex/>
   </div>
 </template>
@@ -55,6 +56,7 @@
     // },
     methods: {
       addition() {
+        //调用vuex中mutations的方法：
         this.$store.commit(INCREMENT)
       },
       subtraction() {
