@@ -36,11 +36,11 @@ new Vue({
  *  ***************************其他组件应该按照规定好的规则，方式对共享变量进行访问和修改*******************
  *    state:对象，保存状态
  *               给state中的对象添加新的属性：
- *                    方式1：使用Vue.set(state.info, 'height', 183)
+ *                    方式1：使用Vue.set(state.info, 'height', 183)：
  *                    方式2：state.info = {...}
  *    mutations: 对状态进行修改，建议是同步的操作
  *               在通过mutation更新数据的时候, 有可能我们希望携带一些额外的参数; 参数被称为是mutation的载荷(Payload)
- *               mutations的
+ *               mutations中传一个参数的时候，跟之前普通传参一样，当传多个参数的时候，则通过payload
  *                          定义：changeCount(state,payload){
  *                                  state.count = payload.count;
  *                                }
@@ -53,8 +53,12 @@ new Vue({
  *                    }
  *              在Vue组件中, 如果我们调用action中的方法, 那么就需要使用dispatch
  *                    this.$store.dispatch('increment',{count:1});
- *    getters:
- *    modules:
+ *    getters:类似单个组件中的计算属性，比如需要从store中获取一些state变异后的状态
+ *
+ *    modules:随着项目的扩大，state会越来越臃肿，这时候可是让每个module管理一部分state,每个module是一个对象，里面可以定义state,mutations,actions等
+ *          使用某个module中的state:  $store.state.a.name
+ *          使用某个module中的state:  $store.state.a.name
+ *
  *
  *    组件中如何使用：
  *        <h2>{{$store.state.counter}}</h2>

@@ -24,6 +24,7 @@
     <h2>{{$store.getters.powerCounter}}</h2>
     <h2>{{$store.getters.more20stu}}</h2>
     <h2>{{$store.getters.more20stuLength}}</h2>
+    <!--moreAgeStu类似计算属性，这里的使用，虽然类似方法的调用，但是调用的方法不是moreAgeStu本身，而是该计算属性的返回值，即返回的回调函数-->
     <h2>{{$store.getters.moreAgeStu(12)}}</h2>
 
     <h2>----------Hello Vuex内容----------</h2>

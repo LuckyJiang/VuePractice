@@ -15,6 +15,7 @@ export default {
       return getters.fullname + '2222'
     },
     fullname3(state, getters, rootState) {
+      //rootState:大模块中定义的state
       return getters.fullname2 + rootState.counter
     }
   },

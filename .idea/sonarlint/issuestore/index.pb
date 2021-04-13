@@ -502,3 +502,5 @@ t
 DLearnVuejs08/01-Promise的使用/04-Promise的链式调用(二).html,9\b\9b6d9a9c5bd687b005c73572972df7b95eb79655
 r
 BLearnVuejs08/01-Promise的使用/05-Promise的all方法使用.html,d\6\d6b4b885e95696ee45d2844bd8b565ad50c88219
+R
+"LearnVuejs08/learnvuex/src/main.js,1\0\1082fa6afaf51973e7a23cc94c59595f379418b3
