@@ -3,6 +3,7 @@
 </template>
 
 <script>
+  //不推荐每个组件都引用一次axios
   import axios from 'axios'
   // import android from 'android'
 

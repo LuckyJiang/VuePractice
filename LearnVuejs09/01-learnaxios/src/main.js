@@ -9,16 +9,18 @@ new Vue({
   el: '#app',
   render: h => h(App)
 })
+/**
+ * 正常开发需要定义一个axios实例，进行全局封装：network/request.js
+ */
 
-
-
+//对象的解构
 // const obj = {
 //   name: 'kobe',
 //   age: 30
 // }
 //
 // const {name, age} = obj;
-//
+//数组的解构
 // const names = ['why', 'kobe', 'james']
 // // const name1 = names[0]
 // // const name2 = names[1]
@@ -36,7 +38,8 @@ new Vue({
 //
 // axios({
 //   url: 'http://123.207.32.32:8000/home/data',
-//   // 专门针对get请求的参数拼接
+//   // params 专门针对get请求的参数拼接
+//    data是专门针对post请求的参数
 //   params: {
 //     type: 'pop',
 //     page: 1
@@ -74,6 +77,7 @@ new Vue({
 //     page: 5
 //   }
 // })]).then(axios.spread((res1, res2) => {
+//   通过axios.spread将结果展开
 //   console.log(res1);
 //   console.log(res2);
 // }))

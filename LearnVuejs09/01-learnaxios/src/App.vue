@@ -9,6 +9,7 @@
 <script>
   import HelloWorld from './components/HelloWorld'
 
+  //不推荐每个组件都引用一次axios
   import axios from 'axios'
 
   export default {
