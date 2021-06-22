@@ -5,10 +5,12 @@
   <title>Title</title>
 </head>
 <body>
+<!--不常用-->
+<!--v-text作用和Mustache一致，一般不常用，会覆盖标签中的内容-->
 
 <div id="app">
   <h2>{{message}}, 李银河!</h2>
-  <h2 v-text="message">, 李银河!</h2>
+  <h2 v-text="message">, 李银河!</h2>  <!-- message 把“,李银河”覆盖了 -->
 </div>
 
 <script src="../js/vue.js"></script>
