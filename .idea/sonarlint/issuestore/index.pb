@@ -504,3 +504,15 @@ r
 BLearnVuejs08/01-Promise的使用/05-Promise的all方法使用.html,d\6\d6b4b885e95696ee45d2844bd8b565ad50c88219
 R
 "LearnVuejs08/learnvuex/src/main.js,1\0\1082fa6afaf51973e7a23cc94c59595f379418b3
+c
+3LearnVuejs08/learnvuex/src/components/HelloVuex.vue,c\1\c1d7f594c5d167c80b13266a038480482a8fb97a
+c
+3LearnVuejs08/learnvuex/src/store/mutations-types.js,c\0\c07bc56ecb8dc36c552841feb8729837f0f9e1e1
+Y
+)LearnVuejs08/learnvuex/src/store/index.js,5\d\5d9672bf1fc6f6a557fb31b6ff233d0f6b648ca6
+]
+-LearnVuejs08/learnvuex/src/store/mutations.js,7\e\7ec86896bb2c9ad44055891f4b813b7281586027
+R
+"LearnVuejs08/learnvuex/src/App.vue,5\c\5cc4d70636495557dd3f576463b3a5b957b5cc7e
+
+OLearnVuejs05-v2/01-webpack的使用/06-webpack配置分离/build/base.config.js,0\b\0b1b262295f1bd071ab640cd214246e4aae28946
