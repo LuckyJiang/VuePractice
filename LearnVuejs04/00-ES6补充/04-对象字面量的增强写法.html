@@ -7,51 +7,49 @@
 <body>
 
 <script>
-  // const obj = new Object()
 
-  // const obj = {
-  //   name: 'why',
-  //   age: 18,
-  //   run: function () {
-  //     console.log('在奔跑');
-  //   },
-  //   eat: function () {
-  //     console.log('在次东西');
-  //   }
-  // }
-
-  // 1.属性的增强写法
+	/**
+     * 1.属性的增强写法
+	 * @type {string}
+	 */
   const name = 'why';
   const age = 18;
   const height = 1.88
 
   // ES5的写法
-  // const obj = {
-  //   name: name,
-  //   age: age,
-  //   height: height
-  // }
+  const obj1 = {
+    name: name,
+    age: age,
+    height: height
+  }
+  console.log(obj1);
 
-  // const obj = {
-  //   name,
-  //   age,
-  //   height,
-  // }
-  //
-  // console.log(obj);
+  // ES6的写法--属性增强
+  const obj2 = {
+    name,
+    age,
+    height,
+  }
+
+  console.log(obj2);
 
 
-  // 2.函数的增强写法
+	/**
+     * 2.函数的增强写法
+	 * @type {{run: obj3.run, eat: obj3.eat}}
+	 */
   // ES5的写法
-  // const obj = {
-  //   run: function () {
-  //
-  //   },
-  //   eat: function () {
-  //
-  //   }
-  // }
-  const obj = {
+  const obj3 = {
+    run: function () {
+
+    },
+    eat: function () {
+
+    }
+  }
+
+  // ES6的写法--方法的增强
+  const obj4 = {
     run() {
 
     },
