@@ -14,7 +14,12 @@
 
 <script src="../js/vue.js"></script>
 <script>
-  const app = new Vue({
+	/**
+     * 组件的key属性
+     *    官方推荐我们在使用v-for时，给对应的元素或组件添加上一个:key属性
+     *     key的作用主要是为了高效的更新虚拟DOM
+	 */
+	const app = new Vue({
     el: '#app',
     data: {
       letters: ['A', 'B', 'C', 'D', 'E']

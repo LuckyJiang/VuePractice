@@ -18,7 +18,10 @@
 
 <script src="../js/vue.js"></script>
 <script>
-  const app = new Vue({
+	/**
+     *  因为是单选：label中的for 要用不用的值表示
+	 */
+	const app = new Vue({
     el: '#app',
     data: {
       message: '你好啊',
