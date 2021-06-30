@@ -41,6 +41,13 @@
 </template>
 <script src="../js/vue.js"></script>
 <script>
+	/**
+	 * 官方定义：父组件不可以直接使用子组件中的数据，那么如果在父组件使用我们的子组件时，通过作用域插槽 从子组件中拿到数据：
+	 *     1) 我们通过<template slot-scope="slotProps">获取到slotProps属性
+	 2) 在通过slotProps.data就可以获取到刚才我们传入的data
+
+	 import {sceneManager,viewManager,modelManager} from "finger";  -------------> 解构赋值
+	 */
   const app = new Vue({
     el: '#app',
     data: {

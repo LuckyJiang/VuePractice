@@ -22,6 +22,12 @@
 </template>
 <script src="../js/vue.js"></script>
 <script>
+	/**
+	 * 为什么data是一个函数？
+	 *    Vue让每个组件对象都返回一个新的对象，因为如果是同一个对象的，组件在多次使用后会相互影响。
+	 * @type {{counter: number}}
+	 */
+
   // 1.注册组件
   const obj = {
     counter: 0

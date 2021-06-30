@@ -18,7 +18,11 @@
 
 <script src="../js/vue.js"></script>
 <script>
-  // 1.创建组件构造器  当前注册组件的方式已经废弃，不推荐使用
+	/**
+	 * 通过调用Vue.component()注册组件时，组件的注册是全局的
+	 *                 这意味着该组件可以在任意Vue示例下使用
+	 */
+		// 1.创建组件构造器
   const cpnC = Vue.extend({
     template: `
       <div>
