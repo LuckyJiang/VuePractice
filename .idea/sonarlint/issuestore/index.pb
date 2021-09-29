@@ -674,3 +674,5 @@ l
 <LearnVuejs04/02-插值的操作/05-v-pre指令的使用.html,6\9\69f96256f8d8d7587d73bf5caa1498dc95d74c57
 n
 >LearnVuejs04/02-插值的操作/06-v-cloak指令的使用.html,2\9\29471f64484bd6363ec908b0cc18bbfc9b071d58
+e
+5Vuejichu/00-ES6补充/01-块级作用域(讲解).html,f\6\f6f6539d680e1f24a885b65397f5cfef61231ab4

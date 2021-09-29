@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+  <h2 id="bbb">{{isNumber}}</h2>
+
+  <h2 id="aaa">{{lastMessage}}</h2>
+
+  <input type="text" v-model="message" @keyup.enter="onSubmit">
+</div>
+
+<script src="./js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      lastMessage: "",
+      message: '你好啊',
+      isNumber: ""
+    },
+    methods: {
+      onSubmit(value ){
+        let re = /^[0-9]*$/;
+        console.log(this.message)
+        // if(this.newTowerPlateItemValue <= 0 && String(this.newTowerPlateItemValue).indexOf(".") > -1){
+        if(!re.test(this.message) || this.message.startsWith("0")){
+
+          this.message = "-";
+          this. lastMessage = "输入的不是数字";
+          return;
+        }
+        this.lastMessage = "输入的是数字"
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
