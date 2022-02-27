@@ -1,0 +1,5 @@
+1.v-bind: ==> :
+    <img v-bind:src="imgURL" alt="">
+    <img :src="imgURL" alt="">
+
+2.v-on: ==> @

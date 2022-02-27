@@ -15,7 +15,7 @@
 <div id="app">
   <!--<h2 :style="{key(属性名): value(属性值)}">{{message}}</h2>-->
 
-  <!--'50px'必须加上单引号, 否则是当做一个变量去解析-->
+  <!--********  '50px'必须加上单引号, 否则是当做一个变量去解析 ******* -->
   <!--<h2 :style="{fontSize: '50px'}">{{message}}</h2>-->
 
   <!--finalSize当成一个变量使用-->
@@ -26,6 +26,10 @@
 
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * v-bind:style 绑定一下CSS内联样式
+   *  属性名与之前的stype名称不一样，属性名应该满足驼峰格式
+   */
   const app = new Vue({
     el: '#app',
     data: {

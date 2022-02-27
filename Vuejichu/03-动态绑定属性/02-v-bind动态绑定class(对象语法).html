@@ -25,10 +25,14 @@
 
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * 已对象的形式绑定class，根据boolean值动态加载class
+   */
   const app = new Vue({
     el: '#app',
     data: {
       message: '你好啊',
+      active: "active",
       isActive: true,
       isLine: true
     },
