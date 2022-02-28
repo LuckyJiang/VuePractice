@@ -7,14 +7,27 @@
 <body>
 
 <script>
+  // const obj = new Object()  //不常用
 
-	/**
-     * 1.属性的增强写法
-	 * @type {string}
-	 */
+  //大括号就叫做obj的字面量
+  // const obj = {
+  //   name: 'why',
+  //   age: 18,
+  //   run: function () {
+  //     console.log('在奔跑');
+  //   },
+  //   eat: function () {
+  //     console.log('在次东西');
+  //   }
+  // }
+
+  /**
+   * 1.属性的增强写法
+   * @type {string}
+   */
   const name = 'why';
   const age = 18;
-  const height = 1.88
+  const height = 1.88;
 
   // ES5的写法
   const obj1 = {
@@ -33,23 +46,39 @@
 
   console.log(obj2);
 
-
-	/**
-     * 2.函数的增强写法
-	 * @type {{run: obj3.run, eat: obj3.eat}}
-	 */
+  /**
+   * 2.函数的增强写法
+   * @type {{run: obj3.run, eat: obj3.eat}}
+   */
   // ES5的写法
-  const obj3 = {
-    run: function () {
+  // const obj = {
+  //   name: name,
+  //   age: age,
+  //   height: height
+  // }
 
-    },
-    eat: function () {
+  //ES6的写法  推荐使用
+  // const obj = {
+  //   name,
+  //   age,
+  //   height,
+  // }
+  //
+  // console.log(obj);
 
-    }
-  }
 
-  // ES6的写法--方法的增强
-  const obj4 = {
+  // 2.函数的增强写法
+  // ES5的写法
+  // const obj = {
+  //   run: function () {
+  //
+  //   },
+  //   eat: function () {
+  //
+  //   }
+  // }
+  // ES6的写法
+  const obj = {
     run() {
 
     },
