@@ -21,8 +21,6 @@ l
 <Vuejichu/10-组件化开发/01-组件化的基本使用.html,b\6\b69dbdc7cdeecff8e58a26da819c50dd5fa6dca1
 o
 ?Vuejichu/10-组件化开发/02-全局组件和局部组件.html,c\1\c128f915deb33491675c9bd1b01f05601e753dd7
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 v
 FVuejichu/10-组件化开发/07-组件中的data为什么是函数.html,9\c\9c22680ee0f38b39de5a17a544275cad57b9d2f8
 r
@@ -36,10 +34,6 @@ i
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-n
->Vuejichu/11-组件化高级/01-slot-插槽的基本使用.html,c\6\c631cf7d62f698c5826ebb1682d125839434db9d
-n
->Vuejichu/11-组件化高级/02-slot-具名插槽的使用.html,d\4\d4251d06dac2ab961d4bf713ae36a07f6818eda1
 o
 ?Vuejichu/11-组件化高级/03-什么是编译的作用域.html,1\4\14bec284d140440f036541021bce977a797f661e
 {
@@ -492,8 +486,6 @@ a
 1LearnVuejs07/03-tabbar/build/webpack.base.conf.js,7\b\7b44dfb4e6fa7b2ea215ca1eee59df60353d0f97
 R
 "LearnVuejs07/03-tabbar/src/main.js,5\8\583d49fdac741b673d1e0885422bc72b659126db
-o
-?LearnVuejs08/01-Promise的使用/01-Promise的基本使用.html,8\e\8e32bddce94884b28e5c16ee1fc3b9f4ee5944ec
 u
 ELearnVuejs08/01-Promise的使用/02-Promise的另外处理形式.html,8\f\8f4fbb2d6a9c4fd0614c2cbb44266e686b1ac30e
 t
@@ -534,26 +526,6 @@ d
 4LearnVuejs04/01-Vue初体验/02-vue列表展示.html,6\8\68cd087774fe2c71b55b8dd455082ae2960bf0e2
 h
 8LearnVuejs04/01-Vue初体验/03-vue案例-计数器.html,a\b\ab8433a77d426402510c75504a02aca929dcf60a
-p
-@LearnVuejs04/03-动态绑定属性/01-v-bind的基本使用.html,c\a\ca70fb2a49e73487aa3fd7e49a8ef928851f4932
-�
-PLearnVuejs04/03-动态绑定属性/02-v-bind动态绑定class(对象语法).html,c\0\c05dee78431cf34d8e0d7cca50c5cb9386a94d00
-�
-PLearnVuejs04/03-动态绑定属性/03-v-bind动态绑定class(数组语法).html,7\5\75cbb5dd20aab900d6aec452a4351205ebf03225
-z
-JLearnVuejs04/03-动态绑定属性/04-作业(v-for和v-bind的结合).html,4\b\4bd570bcf18c5c302f720e069f3e79d5a40294ca
-�
-PLearnVuejs04/03-动态绑定属性/05-v-bind动态绑定style(对象语法).html,4\6\46dfa3d0865ab14f930e45d382a2c6206dfc413e
-�
-PLearnVuejs04/03-动态绑定属性/06-v-bind动态绑定style(数组语法).html,f\6\f63dc92e29aef34a20b5fbe5ba93dec0d233f0d2
-p
-@LearnVuejs04/04-计算属性/01-计算属性的基本使用.html,f\8\f8708277fcc2361fc24150dd5a7efbb3aab54308
-p
-@LearnVuejs04/04-计算属性/02-计算属性的复杂操作.html,a\5\a524962d5b87730eee1605f98fc9ffff18f14b4a
-s
-CLearnVuejs04/04-计算属性/03-计算属性的setter和getter.html,9\9\99a355e844f683c8baa4ed733b0d376d13988fb6
-t
-DLearnVuejs04/04-计算属性/04-计算属性和methods的对比.html,2\b\2bcc9e9e2b8dec7671bbe4c9f1351ac9a4201f49
 h
 8LearnVuejs04/05-事件监听/01-v-on的基本使用.html,2\7\274d85291dbbb9247dd128bc43f2acee90751980
 h
@@ -570,12 +542,6 @@ p
 @LearnVuejs04/06-条件判断/04-用户登录切换的案例.html,5\a\5ae7d69214addd1f1140f3cc3418ba79c2dbfdba
 {
 KLearnVuejs04/06-条件判断/05-用户登录切换的案例(小问题).html,2\0\2019ac8dba00fbe07075e078f926fe8d6b5a04c3
-d
-4LearnVuejs04/06-条件判断/06-v-show的使用.html,7\c\7cee55da75d9cac3cdcf718d6bcf1fa981520813
-f
-6LearnVuejs04/07-循环遍历/01-v-for遍历数组.html,8\1\813adc5b92c4b84cd439bab19d800f218f95b2af
-f
-6LearnVuejs04/07-循环遍历/02-v-for遍历对象.html,9\c\9c8e43f575a1eb5d291ad9646eba974f0bb61b5f
 o
 ?LearnVuejs04/07-循环遍历/03-v-for使用过程添加key.html,3\6\365bd3402dbb1d11f55ed47858e430027bf2bd44
 y
@@ -631,8 +597,6 @@ OLearnVuejs04/10-组件化开发/13-组件访问-父访问子-children-refs.html
 }
 MLearnVuejs04/10-组件化开发/14-组件访问-子访问父-parent-root.html,3\0\30e75768aedb4d08e946365bc66692e5ebdc92d3
 r
-BLearnVuejs04/11-组件化高级/01-slot-插槽的基本使用.html,2\b\2be2630e3ac6eee49c1e15c8c08b2f0e0d5ae499
-r
 BLearnVuejs04/11-组件化高级/02-slot-具名插槽的使用.html,f\4\f417f736ca6904fc5c4c04d2d7309f1d081a42cc
 s
 CLearnVuejs04/11-组件化高级/03-什么是编译的作用域.html,7\b\7bceedb7e24389b06f2e17b9de0b3795d5e12067
@@ -662,17 +626,5 @@ F
 LearnVuejs04/js/vue.js,6\1\6183afb1f427bf0e83854da22dc0ec5552a5b1f7
 c
 3LearnVuejs04/01-Vue初体验/04-vue的template.html,b\7\b7c4e24c3a5882f435d8c468d6d887c0ff405e84
-f
-6LearnVuejs04/02-插值的操作/01-Mustache语法.html,a\f\afdcfe86b732f682709085759668de75360465dd
-m
-=LearnVuejs04/02-插值的操作/02-v-once指令的使用.html,b\4\b43a435619763bd0dc9c0f096c9cce745ebda184
-m
-=LearnVuejs04/02-插值的操作/03-v-html指令的使用.html,a\a\aac9a1e71a2ccb26ed3b5002cf3504763064e3e4
-m
-=LearnVuejs04/02-插值的操作/04-v-text指令的使用.html,1\9\197520362b0b10993ab3091022c33084fd2c69b7
-l
-<LearnVuejs04/02-插值的操作/05-v-pre指令的使用.html,6\9\69f96256f8d8d7587d73bf5caa1498dc95d74c57
-n
->LearnVuejs04/02-插值的操作/06-v-cloak指令的使用.html,2\9\29471f64484bd6363ec908b0cc18bbfc9b071d58
 e
 5Vuejichu/00-ES6补充/01-块级作用域(讲解).html,f\6\f6f6539d680e1f24a885b65397f5cfef61231ab4
