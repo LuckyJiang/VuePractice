@@ -25,12 +25,13 @@
 
 <script src="../js/vue.js"></script>
 <script>
-	/**
-     * 计算属性有缓存，普通的method方法没有缓存
-	 */
-		// angular -> google
-  // TypeScript(microsoft) -> ts(类型检测)
-  // flow(facebook) ->
+
+  /**
+   * 计算属性具有缓存性
+   *  如果data没有发生改变，调用几次method方法，久执行了四次；
+   *  但是如果data没有发生改变，无论调用了几次计算属性，
+   *      只要data值没有发生改变，则计算属性只执行一次，并对结果进行了缓存。性能高
+   */
   const app = new Vue({
     el: '#app',
     data: {

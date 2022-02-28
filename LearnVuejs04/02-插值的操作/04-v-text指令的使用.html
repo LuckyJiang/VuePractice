@@ -5,8 +5,6 @@
   <title>Title</title>
 </head>
 <body>
-<!--不常用-->
-<!--v-text作用和Mustache一致，一般不常用，会覆盖标签中的内容-->
 
 <div id="app">
   <h2>{{message}}, 李银河!</h2>
@@ -15,6 +13,9 @@
 
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * v-text作用和Mustache一致，一般不常用，会覆盖标签中的内容
+   */
   const app = new Vue({
     el: '#app',
     data: {

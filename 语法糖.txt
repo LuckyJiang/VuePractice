@@ -3,3 +3,6 @@
     <img :src="imgURL" alt="">
 
 2.v-on: ==> @
+
+
+******* 依然从vuejichu上跟着视频学习，后期在同步到day04上

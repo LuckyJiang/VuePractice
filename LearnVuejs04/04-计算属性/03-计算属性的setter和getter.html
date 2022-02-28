@@ -19,12 +19,25 @@
       lastName: 'Bryant'
     },
     computed: {
+      /**
+       * 计算属性定义方式一：
+       * 其实就相当于只设置了get方法
+       */
       // fullName: function () {
       //   return this.firstName + ' ' + this.lastName
       // }
+
+
       // name: 'coderwhy'
-      // 计算属性一般是没有set方法, 只读属性.
+      /**
+       * 计算属性定义方式二：
+       * 计算属性一般是没有set方法, 只读属性.
+       */
       fullName: {
+        /**
+         * 如果执行app.fullName = "abc";--相当于调用了set方法
+         * @param newValue
+         */
         set: function(newValue) {
           // console.log('-----', newValue);
           const names = newValue.split(' ');
@@ -34,11 +47,7 @@
         get: function () {
           return this.firstName + ' ' + this.lastName
         }
-      },
-
-      // fullName: function () {
-      //   return this.firstName + ' ' + this.lastName
-      // }
+      }
     }
   })
 </script>

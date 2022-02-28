@@ -21,8 +21,12 @@
 
 <script src="../js/vue.js"></script>
 <script>
-  // 在vue解析之前, div中有一个属性v-cloak
-  // 在vue解析之后, div中没有一个属性v-cloak
+  /**
+   * v-cloak:后面没有表达式
+   * 在vue解析之前, div中有一个属性v-cloak
+   * 在vue解析之后, div中没有一个属性v-cloak
+   * 因此可以根据v-cloak设置样式，当标签还有v-cloadk时，不显示标签，防止在vue未渲染之前，出现不合理的现象
+   */
   setTimeout(function () {
     const app = new Vue({
       el: '#app',
