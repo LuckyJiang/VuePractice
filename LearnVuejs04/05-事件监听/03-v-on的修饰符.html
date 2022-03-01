@@ -7,13 +7,16 @@
 <body>
 
 <div id="app">
-  <!--1. .stop修饰符的使用-->
+  <!--1. .stop修饰符的使用：阻止冒泡-->
+  <!--点击按钮时：只会执行btnClick,而不执行divClick-->
   <div @click="divClick">
     aaaaaaa
     <button @click.stop="btnClick">按钮</button>
   </div>
 
-  <!--2. .prevent修饰符的使用：阻止默认行为-->
+  <!--2. .prevent修饰符的使用：阻止默认事件-->
+  <!--例如表单中，点击按钮时，他会自动提交数据；如果我们点击按钮时不想让表单提交，
+      而是通过自己定义的submitClick方法，在这个方法中，自定义提交-->
   <br>
   <form action="baidu">
     <input type="submit" value="提交" @click.prevent="submitClick">
@@ -22,7 +25,8 @@
   <!--3. .监听某个键盘的键帽-->
   <input type="text" @keyup.enter="keyUp">
 
-  <!--4. .once修饰符的使用-->
+  <!--4. .once修饰符的使用：点击回调只会触发一次-->
+  <!--点击按钮只会执行一次-->
   <button @click.once="btn2Click">按钮2</button>
 </div>
 

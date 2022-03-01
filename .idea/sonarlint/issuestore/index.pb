@@ -526,12 +526,6 @@ d
 4LearnVuejs04/01-Vue初体验/02-vue列表展示.html,6\8\68cd087774fe2c71b55b8dd455082ae2960bf0e2
 h
 8LearnVuejs04/01-Vue初体验/03-vue案例-计数器.html,a\b\ab8433a77d426402510c75504a02aca929dcf60a
-h
-8LearnVuejs04/05-事件监听/01-v-on的基本使用.html,2\7\274d85291dbbb9247dd128bc43f2acee90751980
-h
-8LearnVuejs04/05-事件监听/02-v-on的参数问题.html,d\f\dfcef0c2ee94843e85c927d223123ef51cc0a35a
-e
-5LearnVuejs04/05-事件监听/03-v-on的修饰符.html,0\2\02d1c7734b2be1800475f0d908694484a66efa71
 b
 2LearnVuejs04/06-条件判断/01-v-if的使用.html,a\8\a80b62fd948dfeff93697044749dac40a963435d
 k

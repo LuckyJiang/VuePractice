@@ -13,7 +13,7 @@
   <br>
   <br>
 
-  <!--2.在事件定义时,有一个参数，但是调用方法时省略了小括号,这个 Vue会默认将浏览器生产的event事件对象作为参数传入到方法-->
+  <!--2.在事件定义时,有一个参数，但是调用方法时省略了小括号,这时Vue会默认将浏览器生产的event事件对象作为参数传入到方法-->
   <span>methods中的定义的方法有一个参数</span><br>
   <button @click="btn2Click(123)">按钮2-1:btn2Click(123)</button><br>
   <button @click="btn2Click()">按钮2-2：btn2Click()不传值</button><br>
@@ -22,7 +22,7 @@
   <br>
 
   <!--3.方法定义时, 我们需要event对象, 同时又需要其他参数-->
-  <!-- 在调用方式, 如何手动的获取到浏览器参数的event对象: $event-->
+  <!-- 那么在调用方法时, 如何手动的获取到浏览器参数的event对象: $event-->
   <button @click="btn3Click(abc, $event)">按钮3</button>
 </div>
 
