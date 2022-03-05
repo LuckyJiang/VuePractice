@@ -620,5 +620,3 @@ F
 LearnVuejs04/js/vue.js,6\1\6183afb1f427bf0e83854da22dc0ec5552a5b1f7
 c
 3LearnVuejs04/01-Vue初体验/04-vue的template.html,b\7\b7c4e24c3a5882f435d8c468d6d887c0ff405e84
-e
-5Vuejichu/00-ES6补充/01-块级作用域(讲解).html,f\6\f6f6539d680e1f24a885b65397f5cfef61231ab4
