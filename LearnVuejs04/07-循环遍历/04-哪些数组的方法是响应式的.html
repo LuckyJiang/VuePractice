@@ -15,6 +15,10 @@
 
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * 数组的增删改有很多形式，那么那些形式是响应式的呢？
+   */
+
   const app = new Vue({
     el: '#app',
     data: {
@@ -22,21 +26,21 @@
     },
     methods: {
       btnClick() {
-        // 1.push方法
+        // 1.push方法：在数组末尾添加       @响应式
         // this.letters.push('aaa')
         // this.letters.push('aaaa', 'bbbb', 'cccc')
 
-        // 2.pop(): 删除数组中的最后一个元素
+        // 2.pop(): 删除数组中的最后一个元素  @响应式
         // this.letters.pop();
 
-        // 3.shift(): 删除数组中的第一个元素
+        // 3.shift(): 删除数组中的第一个元素  @响应式
         // this.letters.shift();
 
-        // 4.unshift(): 在数组最前面添加元素
+        // 4.unshift(): 在数组最前面添加元素  @响应式
         // this.letters.unshift()
         // this.letters.unshift('aaa', 'bbb', 'ccc')
 
-        // 5.splice作用: 删除元素/插入元素/替换元素
+        // 5.splice作用: 删除元素/插入元素/替换元素  @响应式
         // 删除元素: 第二个参数传入你要删除几个元素(如果没有传,就删除后面所有的元素)
         // 替换元素: 第二个参数, 表示我们要替换几个元素, 后面是用于替换前面的元素
         // 插入元素: 第二个参数, 传入0, 并且后面跟上要插入的元素
@@ -45,17 +49,17 @@
         this.letters.splice(1, 3, 'm', 'n', 'l', 'x')
         // this.letters.splice(1, 0, 'x', 'y', 'z')
 
-        // 5.sort()
+        // 5.sort()：排序   @响应式
         // this.letters.sort()
 
-        // 6.reverse()
+        // 6.reverse()：反转   @响应式
         // this.letters.reverse()
 
-        // 注意: 通过索引值修改数组中的元素
-        // this.letters[0] = 'bbbbbb';
-        // this.letters.splice(0, 1, 'bbbbbb')
+        // 注意: 通过索引值修改数组中的元素  @非响应式
+        // this.letters[0] = 'bbbbbb';   //非响应式
+        // this.letters.splice(0, 1, 'bbbbbb')  //响应式
         // set(要修改的对象, 索引值, 修改后的值)
-        Vue.set(this.letters, 0, 'bbbbbb')
+        Vue.set(this.letters, 0, 'bbbbbb')  //@响应式
       }
     }
   })
@@ -68,6 +72,9 @@
   // function sum(num1, num2, num3) {
   //   return num1 + num2 + num3
   // }
+  /**
+   * 定义可变参数
+   */
   // function sum(...num) {
   //   console.log(num);
   // }

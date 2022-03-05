@@ -12,7 +12,7 @@
     <li v-for="item in names">{{item}}</li>
   </ul>
 
-  <!--2.在遍历的过程中, 获取索引值-->
+  <!--2.在遍历的过程中, 获取索引值，第一个参数为数组中的一个元素，第二个参数为下标-->
   <ul>
     <li v-for="(item, index) in names">
       {{index+1}}.{{item}}
@@ -22,6 +22,9 @@
 
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * 遍历数组
+   */
   const app = new Vue({
     el: '#app',
     data: {
