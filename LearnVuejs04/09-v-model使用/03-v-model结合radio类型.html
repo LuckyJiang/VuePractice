@@ -8,6 +8,8 @@
 
 <div id="app">
   <label for="male">
+    <!--将value属性绑定到v-model上去-->
+    <!--两个v-model绑定的是同一个变量，也可以是互斥的-->
     <input type="radio" id="male" value="男" v-model="sex">男
   </label>
   <label for="female">

@@ -7,8 +7,12 @@
 <body>
 
 <div id="app">
+  <!--下面两个都实现了双向绑定-->
   <!--<input type="text" v-model="message">-->
   <!--<input type="text" :value="message" @input="valueChange">-->
+
+  <!-- :value="message" :单向绑定，当主动修改message的时候，input中的数据会及时响应-->
+  <!-- @input="message = $event.target.value":单向绑定，当用户在input中输入值时，及时修改messge值-->
   <input type="text" :value="message" @input="message = $event.target.value">
   <h2>{{message}}</h2>
 </div>
@@ -16,8 +20,9 @@
 <script src="../js/vue.js"></script>
 <script>
 	/**
+     * 双向绑定事件
      * v-model其实是一个语法糖，它的背后本质上是包含两个操作：
-	     1.v-bind绑定一个value属性--  :value
+	     1.v-bind绑定一个value属性--  :value="message"
 	     2.v-on指令给当前元素绑定input事件  @input
 	 */
 	const app = new Vue({
