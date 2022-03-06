@@ -7,6 +7,7 @@
 <body>
 
 <div id="app">
+  <!--  v-bind不支持驼峰，因此用“-”代替驼峰-->
   <cpn :c-info="info" :child-my-message="message" v-bind:class></cpn>
 </div>
 
@@ -22,6 +23,7 @@
   const cpn = {
     template: '#cpn',
     props: {
+      // 类型是对象或者数组时, 默认值必须是一个函数**************
       cInfo: {
         type: Object,
         default() {

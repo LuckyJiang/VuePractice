@@ -26,6 +26,10 @@
 
 <script src="../js/vue.js"></script>
 <script>
+
+  /**
+   * 子组件访问父组件，使用$parent
+   */
   const app = new Vue({
     el: '#app',
     data: {
@@ -45,8 +49,8 @@
             methods: {
               btnClick() {
                 // 1.访问父组件$parent
-                // console.log(this.$parent);
-                // console.log(this.$parent.name);
+                console.log(this.$parent);
+                console.log(this.$parent.name);
 
                 // 2.访问根组件$root
                 console.log(this.$root);
