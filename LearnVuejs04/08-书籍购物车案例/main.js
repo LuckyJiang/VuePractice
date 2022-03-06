@@ -1,3 +1,8 @@
+/**
+ * 过滤器：前面为需要顾虑的值，后面指定过滤器方法
+ * item.price:为需要过滤的值，showPrice 为定义的过滤器方法
+ * <td>{{item.price | showPrice}}</td>
+ */
 const app = new Vue({
   el: '#app',
   data: {
@@ -55,6 +60,9 @@ const app = new Vue({
       // }
       // return totalPrice
 
+      /**
+       * let i  in ...:"i"为下标
+       */
       // 2.for (let i in this.books)
       // let totalPrice = 0
       // for (let i in this.books) {
@@ -64,6 +72,9 @@ const app = new Vue({
       //
       // return totalPrice
 
+      /**
+       * let i of ...: "i"为数组中的某个对象
+       */
       // 3.for (let i of this.books)
       // let totalPrice = 0
       // for (let item of this.books) {
@@ -71,13 +82,18 @@ const app = new Vue({
       // }
       // return totalPrice
 
+      /**
+       *
+       */
       return this.books.reduce(function (preValue, book) {
         return preValue + book.price * book.count
       }, 0)
     }
   },
   filters: {
+    //过滤器
     showPrice(price) {
+      // 价格显示两个小数点
       return '¥' + price.toFixed(2)
     }
   }

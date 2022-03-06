@@ -25,8 +25,10 @@
         <td>{{item.id}}</td>
         <td>{{item.name}}</td>
         <td>{{item.date}}</td>
+        <!--过滤器：前面为需要顾虑的值，后面指定过滤器方法-->
         <td>{{item.price | showPrice}}</td>
         <td>
+          <!-- v-bind:disabled="item.count <= 1" 动态绑定disabled属性：如果等于1了则不可以点击-->
           <button @click="decrement(index)" v-bind:disabled="item.count <= 1">-</button>
           {{item.count}}
           <button @click="increment(index)">+</button>
