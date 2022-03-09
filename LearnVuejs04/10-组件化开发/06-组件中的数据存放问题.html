@@ -35,8 +35,9 @@
    *  1.注册一个全局组件
    *   组件应该有自己保存数据的地方
    *   data(){}:  必须为方法;该方法定义的数据是组件自己的属性数据
+   *   需要注意的是：new Vue（）即Vue实例数据 中的data为对象
    */
-  Vue.component('cpn', {
+  Vue.component('cpn', {   //这是组件
     template: '#cpn',
     data() {
       return {
@@ -45,11 +46,11 @@
     }
   })
 
-  const app = new Vue({
+  const app = new Vue({   //这是vue实例
     el: '#app',
     data: {
       message: '你好啊',
-      // title: '我是标题'   //子组件内部的不能访问通过{{title}}的形式访问vue实例的数据
+      // title: '我是标题'   //此方法不可以：因为组件内部不能通过{{title}}的形式访问vue实例的数据
     }
   })
 </script>

@@ -29,7 +29,11 @@
   Vue.component('cpn', {
     template: '#cpn',
     // data() {
-    //   //所有组件获取到的数据是不同的
+    //
+    /**
+     * 所有组件获取到的数据是不同的，如果想所有的组件都公用一个对象，则采用下面方法
+     * @returns {{counter: number}}
+     */
     //   return {
     //     counter: 0
     //   }
