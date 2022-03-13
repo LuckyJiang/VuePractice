@@ -1,4 +1,4 @@
-;
+;  //加入“；”目的：当引入多分js时，进行区分
 var moduleB = (function () {
   var obj = {}
 
