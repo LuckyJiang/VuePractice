@@ -1,3 +1,4 @@
+//匿名函数问题。闭包解决全局命名冲突问题
 var moduleA = (function () {
   // 导出的对象
   var obj = {}

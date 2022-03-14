@@ -152,6 +152,8 @@ f
 6LearnVuejs07/01-learnvuerouter/src/components/User.vue,7\0\70fbd012e6310fce5248e2b75c11f98dfb7d2f68
 b
 2LearnVuejs07/01-learnvuerouter/src/router/index.js,b\e\be767ced9fff23319d6038df9b22dab0421f97fd
+f
+6LearnVuejs07/01-learnvuerouter/src/components/Home.vue,d\3\d31b6b52dff890ea6a65d080503cff9a66648d36
 Z
 *LearnVuejs07/01-learnvuerouter/src/main.js,3\2\321cf7369f795849df2ba426d68a605b8f6c22f3
 T
@@ -486,6 +488,8 @@ _
 /LearnVuejs04/01-Vue初体验/01-HelloVuejs.html,b\7\b78d283b367a1a744b8d0dca5a26b9a301c8cd63
 d
 4LearnVuejs04/01-Vue初体验/02-vue列表展示.html,6\8\68cd087774fe2c71b55b8dd455082ae2960bf0e2
+h
+8LearnVuejs04/01-Vue初体验/03-vue案例-计数器.html,a\b\ab8433a77d426402510c75504a02aca929dcf60a
 b
 2LearnVuejs04/06-条件判断/01-v-if的使用.html,a\8\a80b62fd948dfeff93697044749dac40a963435d
 k
@@ -498,6 +502,8 @@ p
 KLearnVuejs04/06-条件判断/05-用户登录切换的案例(小问题).html,2\0\2019ac8dba00fbe07075e078f926fe8d6b5a04c3
 o
 ?LearnVuejs04/07-循环遍历/03-v-for使用过程添加key.html,3\6\365bd3402dbb1d11f55ed47858e430027bf2bd44
+y
+ILearnVuejs04/07-循环遍历/04-哪些数组的方法是响应式的.html,5\3\5322cc7ee992c4f87e553362ca6116572e0ccfe2
 m
 =LearnVuejs04/07-循环遍历/05-作业的回顾和完成.html,6\c\6ca5ae71752655e625371b7ebc71096eba540df6
 `
@@ -568,19 +574,19 @@ f
 6LearnVuejs04/07-循环遍历/01-v-for遍历数组.html,8\1\813adc5b92c4b84cd439bab19d800f218f95b2af
 f
 6LearnVuejs04/07-循环遍历/02-v-for遍历对象.html,9\c\9c8e43f575a1eb5d291ad9646eba974f0bb61b5f
-v
-FLearnVuejs04/10-组件化开发/06-组件中的数据存放问题.html,f\9\f9c1335be9d178a223b3ea05c1ee318a8b98209b
-p
-@LearnVuejs04/10-组件化开发/01-组件化的基本使用.html,9\4\9495fe53cebddc1182fcac3123acefd7fdb7bf98
 s
 CLearnVuejs04/10-组件化开发/02-全局组件和局部组件.html,d\1\d12a084a13b52ea8b18fb0162c32a68823a63f28
 m
 =LearnVuejs04/10-组件化开发/03-父组件和子组件.html,0\5\050b31d4b9d1406265c2f31720bf6e622a69376c
-f
-6LearnVuejs07/01-learnvuerouter/src/components/Home.vue,d\3\d31b6b52dff890ea6a65d080503cff9a66648d36
-h
-8LearnVuejs04/01-Vue初体验/03-vue案例-计数器.html,a\b\ab8433a77d426402510c75504a02aca929dcf60a
-m
-=LearnVuejs04/02-插值的操作/02-v-once指令的使用.html,b\4\b43a435619763bd0dc9c0f096c9cce745ebda184
 v
 FLearnVuejs04/10-组件化开发/04-组件的语法糖注册方式.html,b\a\ba727c7a4ff36c9f757502951af3a4a52f9cb14d
+p
+@LearnVuejs04/10-组件化开发/01-组件化的基本使用.html,9\4\9495fe53cebddc1182fcac3123acefd7fdb7bf98
+m
+=LearnVuejs04/02-插值的操作/02-v-once指令的使用.html,b\4\b43a435619763bd0dc9c0f096c9cce745ebda184
+s
+CLearnVuejs04/10-组件化开发/05-组件模板的分离写法.html,9\6\96b5df501863576beaec843c9bb248acac32766d
+v
+FLearnVuejs04/10-组件化开发/06-组件中的数据存放问题.html,f\9\f9c1335be9d178a223b3ea05c1ee318a8b98209b
+�
+\LearnVuejs04/10-组件化开发/08-组件通信-父组件向子组件传递数据-props.html,6\a\6a992417c37530266573096ded7d50df2c7d2e76

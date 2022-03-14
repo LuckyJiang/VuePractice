@@ -10,7 +10,9 @@
   <cpn></cpn>
 
   <cpn>
-    <!--目的是获取子组件中的pLanguages-->
+    <!--目的是获取子组件中的pLanguages,然后在父组件中进行展示-->
+    <!--2.5.0之前必须用template标签，之后版本可以用任意标签-->
+    <!--通过template拿到slot对象，然后通过slot.data拿到传过来的数据“slot :data="pLanguages"”-->
     <template slot-scope="slot">
       <!--<span v-for="item in slot.data"> - {{item}}</span>-->
       <span>{{slot.data.join(' - ')}}</span>
@@ -18,7 +20,7 @@
   </cpn>
 
   <cpn>
-    <!--目的是获取子组件中的pLanguages-->
+    <!--目的是获取子组件中的pLanguages,然后在父组件中进行展示-->
     <template slot-scope="slot">
       <!--<span v-for="item in slot.data">{{item}} * </span>-->
       <span>{{slot.data.join(' * ')}}</span>
@@ -29,6 +31,8 @@
 
 <template id="cpn">
   <div>
+    <!--slot :data="pLanguages"方式，将子组件中的数据传给父组件使用，
+          注意这里data是自定义的，可以为任何变量名-->
     <slot :data="pLanguages">
       <ul>
         <li v-for="item in pLanguages">{{item}}</li>
@@ -38,6 +42,10 @@
 </template>
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * 作用域插槽： 父组件替换插槽的标签，但是内容由子组件来提供
+   *    也就是说，父组件 可以拿到 子组件中的属性（数据）
+   */
   const app = new Vue({
     el: '#app',
     data: {

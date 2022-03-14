@@ -24,10 +24,10 @@
 <script src="../js/vue.js"></script>
 <script>
   /**
-   * 父组件通过对象直接访问子组件
+   * 父组件通过对象直接访问子组件的属性和方法
    *    父组件访问子组件：使用$children或$refs
    *    $children:
-   *        this.$children是一个数组类型，它包含所有子组件对象。
+   *        this.$children是一个数组类型，它包含所有子组件对象，注意这里是组件对象。
    *    $refs的使用：$refs和ref指令通常是一起使用的。
    *        首先，我们通过ref给某一个子组件绑定一个特定的ID。
    *        其次，通过this.$refs.ID就可以访问到该组件了。

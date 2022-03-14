@@ -5,18 +5,14 @@
   <title>Title</title>
 </head>
 <body>
-
-<!--
-1.插槽的基本使用 <slot></slot>
-2.插槽的默认值 <slot>button</slot>
-3.如果有多个值, 同时放入到组件进行替换时, 一起作为替换元素
--->
-
 <div id="app">
   <cpn></cpn>
 
+  <!--cpn标签内部的东西会替换插槽中的内容-->
   <cpn><span>哈哈哈</span></cpn>
   <cpn><i>呵呵呵</i></cpn>
+
+  <!--3.如果有多个值, 同时放入到组件进行替换时, 一起作为替换元素-->
   <cpn>
     <i>呵呵呵</i>
     <div>我是div元素</div>
@@ -34,13 +30,23 @@
   <div>
     <h2>我是组件</h2>
     <p>我是组件, 哈哈哈</p>
+    <!--2.插槽的默认值 <slot>button</slot>-->
     <slot><button>按钮</button></slot>
-    <!--<button>按钮</button>-->
   </div>
 </template>
 
 <script src="../js/vue.js"></script>
 <script>
+  /**
+   * slot插槽的作用是为了实现更多的扩展性
+   * slot：预留可扩展的空间
+   *
+   * 抽取共性，保留不同
+   *
+   * 1.插槽的基本使用 <slot></slot>
+   * 2.插槽的默认值 <slot>button</slot>
+   * 3.如果有多个值, 同时放入到组件进行替换时, 一起作为替换元素
+   */
   const app = new Vue({
     el: '#app',
     data: {
