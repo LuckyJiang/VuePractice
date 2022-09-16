@@ -44,10 +44,91 @@
 
         },
         created: function () {
-            console.log('created');
+            let arr = [
+                {
+                    "装置名称": "苯乙烯装置",
+                    "设备位号": "DE-801",
+                    "零部件名称": "1#加热炉",
+                    "监测点位号": "0201PIC80802.PV",
+                    "监测点描述": "干气胺液回收器V502",
+                    "指标名称": "压力",
+                    "单位": "PA",
+                    "阈值颜色": "level-1",
+                    "阈值名称": "#589741",
+                    "阈值数值(区间)1": "<=100",
+                    "阈值数值(区间)2": ">=50",
+                    "阈值颜色_1": "level-2",
+                    "阈值名称_1": "#589748",
+                    "阈值数值(区间)1_1": "<=300",
+                    "阈值数值(区间)2_1": ">=200"
+                }
+            ]
+            let result = [];//最后的结果
+            arr.forEach(a=>{
+                let obj = new Map();
+                let nameMap =  new Map();
+                let colorMap = new Map();
+                let sectionMap = new Map();
+                for (let aKey in a) {
+                    if(aKey.includes("阈值颜色")){
+                        colorMap.set(aKey, a[aKey]);
+                        continue;
+                    }
+                    if(aKey.includes("阈值名称")){
+                        nameMap.set(aKey, a[aKey]);
+                        continue;
+                    }
+                    if(aKey.includes("阈值数值(区间)")){
+                        sectionMap.set(aKey, a[aKey]);
+                        continue;
+                    }
+                    obj.set(aKey, a[aKey]);
+                }
+                //处理阈值数组
+                obj.set("thresholdValue", this.test(nameMap, colorMap, sectionMap));
+                result.push(obj);
+            })
+            console.log(result)
         },
         mounted: function () {
             console.log('mounted');
+        },
+        methods: {
+            test: function (nameMap, colorMap, sectionMap){
+                if(nameMap.length == 0)
+                    return null;
+                let result = [];
+                nameMap.forEach((v,k)=>{
+                    let obj = new Map();
+                    obj.set("levelName", v);
+                    var split = k.split("_");
+                    if(split.length == 1){
+                        obj.set("levelColor", colorMap.get("阈值颜色"));
+                        obj.set("conditions", this.getConditions(sectionMap, null));
+                    }else{
+                        obj.set("levelColor", colorMap.get("阈值颜色_" + split[1]));
+                        obj.set("conditions", this.getConditions(sectionMap, split[1]));
+                    }
+                    result.push(obj)
+                })
+                return  result;
+            },
+            getConditions: function (sectionMap, suffix){
+                if(suffix){
+                    suffix = "_" + suffix;
+                }else {
+                    suffix = "";
+                }
+                let conditions = [];
+                for(let i = 1;i <= 2; i++){
+                    let value = sectionMap.get("阈值数值(区间)" + i + suffix);
+                    if(!value){
+                        break;
+                    }
+                    conditions.push(value)
+                }
+                return conditions;
+            }
         }
     })
 
