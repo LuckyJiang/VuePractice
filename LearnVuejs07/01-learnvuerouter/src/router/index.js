@@ -39,7 +39,7 @@ const routes = [
       //   redirect: 'news'
       // },
       {
-        path: 'news',
+        path: 'news',    //建议：子路由内部的path 不要加 ”/“
         component: HomeNews
       },
       {

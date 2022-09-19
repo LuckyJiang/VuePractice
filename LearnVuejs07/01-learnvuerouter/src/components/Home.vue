@@ -6,6 +6,7 @@
     <router-link to="/home/news">新闻</router-link>
     <router-link to="/home/message">消息</router-link>
 
+    <!--router-view：显示嵌套子组件的内容-->
     <router-view></router-view>
 
     <h2>{{message}}</h2>
