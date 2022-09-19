@@ -13,7 +13,7 @@ const routes = [
   {
     //路由的默认路径
     path: '',
-    // redirect重定向
+    // redirect重定向指定默认路径
     redirect: '/home'
   },
   {

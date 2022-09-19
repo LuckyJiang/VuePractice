@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2>我是APP组件</h2>
-    <!--设置tag之后，指定<router-link>渲染成什么组件, 比如上面的代码会被渲染成一个<li>元素, 而不是<a>-->
+    <!--设置tag之后，指定<router-link>渲染成什么组件，默认为a标签, 比如上面的代码会被渲染成一个<li>元素, 而不是<a>-->
     <!--设置replace之后，就不能前进和回退页面-->
     <!--设置active-class：修改vue按钮被选中所加class的名称-->
     <!--<router-link to="/home" tag="button" replace active-class="active">首页</router-link>-->
@@ -23,7 +23,7 @@ export default {
       //vue-router给所有的组件都添加了一个$router属性
       // push => pushState
       // this.$router.push('/home')  //相当于pushState
-      this.$router.replace('/home')  //相当于replaceState，不可以返回和前进
+      this.$router.replace('/home')  //相当于replaceState，替换栈顶，不可以返回和前进
       console.log('homeClick');
     },
     aboutClick() {
