@@ -73,8 +73,8 @@ new Vue({
        }
 
       子组件中，如何获取值：
-      <h2>{{$route.params.abc}}</h2>
-      <h2>{{$route.query.age}}</h2>
+      <h2>{{$route.params.abc}}</h2>  // path后面跟的参数
+      <h2>{{$route.query.age}}</h2>   // query对象中的属性
 
  */
 

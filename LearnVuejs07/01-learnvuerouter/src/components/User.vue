@@ -3,6 +3,7 @@
     <h2>我是用户界面</h2>
     <p>我是用户的相关信息, 嘿嘿嘿</p>
     <h2>{{userId}}</h2>
+    <!--获取当前路由path后面的某个参数-->
     <!--$route:当前活跃的路由对象-->
     <h2>{{$route.params.id}}</h2>
     <button @click="btnClick">按钮</button>

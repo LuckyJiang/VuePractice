@@ -2,7 +2,7 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 
-//引入组件方式1：所有组价放入到一个js中
+//引入组件方式1：全部都加载：所有组价放入到一个js中
 // import Home from '../components/Home'
 // import About from '../components/About'
 // import User from '../components/User'
