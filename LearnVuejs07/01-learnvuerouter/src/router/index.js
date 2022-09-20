@@ -54,6 +54,7 @@ const routes = [
     meta: {
       title: '关于'
     },
+    //某个路由的前置守卫
     beforeEnter: (to, from, next) => {
       // console.log('about beforeEnter');
       next()
@@ -91,12 +92,12 @@ const router = new VueRouter({
  *  next: 调用该方法后, 才能进入下一个钩子.
  */
 
-// 前置守卫(guard)
+// 全局的前置守卫(guard)
 router.beforeEach((to, from, next) => {
   // 从from跳转到to
   //功能目的：每个路由对应一个组件，每个组件对应的title不一致，当切换路由的时候，修改title
   document.title = to.matched[0].meta.title
-  // document.title = to.meta.title   //一般用上面的方法，用这个方法，首页一般获取不到名字
+  // document.title = to.meta.title   //一般用上面的方法，用这个方法，首页一般获取不到名字,因为路由嵌套的缘故，导致to对象中可能会有父子等多个路由，此时如果调用to.meta.title就找不到数据
   // console.log(to);
   // console.log('++++');
   //在beforeEach中必须调用next（）方法，才能进入下一个钩子
