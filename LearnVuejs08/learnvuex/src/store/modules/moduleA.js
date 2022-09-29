@@ -15,7 +15,8 @@ export default {
       return getters.fullname + '2222'
     },
     fullname3(state, getters, rootState) {
-      //rootState:大模块中定义的state todo ?? 大模块指的是哪里
+      //rootState:大模块中定义的state
+      //大模块只是的是 index.js中store对象最外层的的state
       return getters.fullname2 + rootState.counter
     }
   },

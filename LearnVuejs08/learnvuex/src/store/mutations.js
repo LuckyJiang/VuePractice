@@ -10,6 +10,7 @@ export default {
   },
   incrementCount(state, payload) {
     // console.log(count);
+    console.log(payload);
     state.counter += payload.count
   },
   addStudent(state, stu) {

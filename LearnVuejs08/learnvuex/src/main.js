@@ -41,10 +41,19 @@ new Vue({
  *    mutations: 对状态进行修改，建议是同步的操作
  *               在通过mutation更新数据的时候, 有可能我们希望携带一些额外的参数; 参数被称为是mutation的载荷(Payload)
  *               mutations中传一个参数的时候，跟之前普通传参一样，当传多个参数的时候，则通过payload
+ *
+ *                          //// todo 定义的方式和访问的方式是否一样？
+ *                          // this.$store.commit('incrementCount', count)
+                            // 2.特殊的提交封装
+                                    this.$store.commit({
+                                        type: 'incrementCount',
+                                        count
+                                     })
+
  *                          定义：changeCount(state,payload){
  *                                  state.count = payload.count;
  *                                }
- *                          触发：this.$store.commit("changeCount",{count:0});  第二个参数为Payload
+ *                          触发：this.$store.commit("changeCount",{count:0});  第二个参数为 Payload
  *                               this.$store.commit({type:'changeCount', count:100});
  *    actions:  action建议处理异步操作，执行完成之后，再去mutations中修改state,比如：网络请求等。
  *              actions中定义方法：context是一个与store具有同样state和事件的对象，但不是同一个对象
@@ -56,9 +65,7 @@ new Vue({
  *    getters:类似单个组件中的计算属性，比如需要从store中获取一些state变异后的状态
  *
  *    modules:随着项目的扩大，state会越来越臃肿，这时候可是让每个module管理一部分state,每个module是一个对象，里面可以定义state,mutations,actions等
- *          使用某个module中的state:  $store.state.a.name
- *          使用某个module中的state:  $store.state.a.name
- *          //todo  还是没搞清楚怎么调用
+ *          使用某个module中的state:  $store.state.a.name  //a 为index.js中某个module的别称
  *
  *
  *    组件中如何使用：
