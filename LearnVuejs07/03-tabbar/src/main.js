@@ -25,7 +25,7 @@ new Vue({
           import MainTabBar from './components/mainTabbar/MainTabBar'
  *
  * 3、关于slot插槽设置属性：<div v-if="!isActive"><slot name="item-icon"></slot></div>
- *    建议slot被一个div包围，然后所有的属性设置和事件绑定都写在div中，因为后期slot会被外部的东西全部替换。
+ *    建议slot被一个div包围，然后所有的属性设置和事件绑定都写在div中，因为后期slot会被外部的东西全部替换，slot中绑定的属性会消失。
  *
  * 4、 给文件夹起别名:这个是webpack的配置，应该在webpack中进行修改：
  *    （1）：在文件夹build下：
