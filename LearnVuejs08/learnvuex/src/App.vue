@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h2>----------App内容: modules中的内容----------</h2>
+    <!-- todo 为啥要加一个 a-->
     <h2>{{$store.state.a.name}}</h2>
     <button @click="updateName">修改名字</button>
     <h2>{{$store.getters.fullname}}</h2>
@@ -97,6 +98,7 @@
         this.$store.commit('updateName', 'lisi')
       },
       asyncUpdateName() {
+        // todo 是所有异步都用dispatch 还是规定 actions中的方法用dispatch
         this.$store.dispatch('aUpdateName')
       }
     }

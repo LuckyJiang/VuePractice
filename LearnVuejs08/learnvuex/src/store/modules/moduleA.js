@@ -15,7 +15,7 @@ export default {
       return getters.fullname + '2222'
     },
     fullname3(state, getters, rootState) {
-      //rootState:大模块中定义的state
+      //rootState:大模块中定义的state todo ?? 大模块指的是哪里
       return getters.fullname2 + rootState.counter
     }
   },

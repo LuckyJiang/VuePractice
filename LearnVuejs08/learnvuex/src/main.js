@@ -58,6 +58,7 @@ new Vue({
  *    modules:随着项目的扩大，state会越来越臃肿，这时候可是让每个module管理一部分state,每个module是一个对象，里面可以定义state,mutations,actions等
  *          使用某个module中的state:  $store.state.a.name
  *          使用某个module中的state:  $store.state.a.name
+ *          //todo  还是没搞清楚怎么调用
  *
  *
  *    组件中如何使用：
@@ -67,6 +68,6 @@ new Vue({
  *    介绍一个组件：devtools:当vuex在mutations中修改state时，这个组件可以记录每个组件对state修改的状态
  *
  *3、子组件使用父组件的定义的参数
- *    方案1：通过props实现，同时在父组件显示子组件的时候，需要将使用的参数绑定到子组件的标签中
+ *    方案1：通过props实现，同时在父组件显示子组件的时候，需要将使用的参数绑定到子组件的标签a中
  *    方案2：vuex
  */
