@@ -11,8 +11,8 @@
    *   Promise是异步编程的一种解决方案，用来封装异步操作。
    *
    *   Promise 的使用形式一：
-   *     执行resolve时，会回调.then()
-   *     执行reject时，会回调.catch()
+   *     执行resolve时，会回调.then()：执行所有的then()
+   *     执行reject时，会回调.catch():执行第一个catch();
    */
   // 1.使用setTimeout
   // setTimeout(() => {
@@ -44,8 +44,8 @@
 
   new Promise(((resolve, reject) => {
     setTimeout( () =>{
-      // resolve("promise");  // promise then1  ; promise then2
-      reject("promise")   //promise faile1;
+      resolve("promise");  // promise then1  ; promise then1 then2
+      // reject("promise")   //promise faile1;
     },1000)
   })).then( data=>{
     console.log(data + " then1");
