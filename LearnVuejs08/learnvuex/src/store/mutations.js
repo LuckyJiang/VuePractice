@@ -17,7 +17,7 @@ export default {
     state.students.push(stu)
   },
   updateInfo(state) {
-    //响应式的
+    //响应式
     state.info.name = 'coderwhy'
 
     // 错误的代码: 不能在mutations中进行异步操作
