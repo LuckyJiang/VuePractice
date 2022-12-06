@@ -22,6 +22,7 @@ export default {
   },
   actions: {
     aUpdateName(context) {
+      //这里的context指的是 当前module的store.
       console.log(context);
       setTimeout(() => {
         context.commit('updateName', 'wangwu')

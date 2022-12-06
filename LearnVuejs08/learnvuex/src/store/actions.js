@@ -4,7 +4,7 @@ export default {
   //   setTimeout(() => {
   //     context.commit('updateInfo')
   //     console.log(payload.message);
-  //     payload.success()
+  //     payload.success()  //外部传过来的payload。success 为回调
   //   }, 1000)
   // },
   aUpdateInfo(context, payload) {

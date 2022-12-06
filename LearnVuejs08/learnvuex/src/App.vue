@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2 class="myfont">----------1-App内容: modules中的内容----------</h2>
-    <!-- todo 为啥要加一个 a-->
+    <!-- 为啥要加一个 a，因为这里使用的name是 名为a的module中state.name-->
     <h2>{{$store.state.a.name}}</h2>
     <button @click="updateName">修改名字</button>
     <h2>{{$store.getters.fullname}}</h2>
