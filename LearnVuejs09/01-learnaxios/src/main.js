@@ -13,14 +13,14 @@ new Vue({
  * 正常开发需要定义一个axios实例，进行全局封装：network/request.js
  */
 
-//对象的解构
+//对象的解构 :用大括号
 // const obj = {
 //   name: 'kobe',
 //   age: 30
 // }
 //
 // const {name, age} = obj;
-//数组的解构
+//数组的解构 ：用 中括号， 很少使用
 // const names = ['why', 'kobe', 'james']
 // // const name1 = names[0]
 // // const name2 = names[1]
@@ -28,7 +28,9 @@ new Vue({
 // const [name1, name2, name3] = names;
 
 
-// 1.axios的基本使用
+/**
+ * 1.axios的基本使用
+ */
 // axios({
 //   url: 'http://123.207.32.32:8000/home/multidata',
 //   // method: 'post'
@@ -39,7 +41,7 @@ new Vue({
 // axios({
 //   url: 'http://123.207.32.32:8000/home/data',
 //   // params 专门针对get请求的参数拼接
-//    data是专门针对post请求的参数
+//   // data是专门针对post请求的参数
 //   params: {
 //     type: 'pop',
 //     page: 1
@@ -49,7 +51,9 @@ new Vue({
 // })
 
 
-// 2.axios发送并发请求
+/**
+ * 2.axios发送并发请求
+ */
 // axios.all([axios({
 //   url: 'http://123.207.32.32:8000/home/multidata'
 // }), axios({
@@ -64,7 +68,10 @@ new Vue({
 //   console.log(results[1]);
 // })
 
-// 3.使用全局的axios和对应的配置在进行网络请求
+/**
+ * 3.使用全局的axios和对应的配置在进行网络请求
+ *    通过axios.spread将结果展开
+ */
 // axios.defaults.baseURL = 'http://123.207.32.32:8000'
 // axios.defaults.timeout = 5000
 //
@@ -91,7 +98,9 @@ new Vue({
 // })
 
 
-// 4.创建对应的axios的实例
+/**
+ * 4.创建对应的axios的实例
+ */
 // const instance1 = axios.create({
 //   baseURL: 'http://123.207.32.32:8000',
 //   timeout: 5000
@@ -121,7 +130,9 @@ new Vue({
 // })
 
 
-// 5.封装request模块
+/**
+ *  5.封装request模块
+ */
 import {request} from "./network/request";
 
 
