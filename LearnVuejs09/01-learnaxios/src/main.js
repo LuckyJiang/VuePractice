@@ -99,7 +99,8 @@ new Vue({
 
 
 /**
- * 4.创建对应的axios的实例
+ * 4.创建对应的axios的实例,不同的axios实例，可以是用不同的baseUrl 等配置
+ *    通常我们不会直接使用axios，而是创建不同的axios实例，每个实例都用自己的配置，达到访问不同服务器的目的。
  */
 // const instance1 = axios.create({
 //   baseURL: 'http://123.207.32.32:8000',
