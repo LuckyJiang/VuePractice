@@ -97,13 +97,4 @@ export function request(config) {
 //     })
 // }
 
-// function test(aaa, bbb) {
-//   // aaa('Hello World')
-//   bbb('err message')
-// }
-//
-// test(function (res) {
-//   console.log(res);
-// }, function (err) {
-//   console.log(err);
-// })
+
