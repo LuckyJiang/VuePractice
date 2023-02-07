@@ -114,6 +114,10 @@
 </template>
 
 <script>
+/**
+ *   better-scroll 的使用：
+ *   1. content 外部必须有一个wrapper标签
+ */
   import BScroll from 'better-scroll'
 
   export default {
@@ -125,6 +129,8 @@
     },
     // 组件创建完后调用
     mounted() {
+      //第一个参数为：标签（div）
+      //
       this.scroll = new BScroll(this.$refs.aaaa, {
         // probeType: 3,
         // pullUpLoad: true
@@ -154,6 +160,7 @@
     height: 150px;
     background-color: red;
 
+    /*overflow + overflow-y 可以实现在某个区域内滚动，但是这种方案实现的滚动不够平滑，因此推荐使用 better-croll*/
     overflow: hidden;
     /*overflow-y: scroll;*/
   }
