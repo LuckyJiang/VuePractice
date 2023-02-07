@@ -14,6 +14,7 @@
       <home-swiper :banners="banners" @swiperImageLoad="swiperImageLoad"/>
       <recommend-view :recommends="recommends"/>
       <feature-view/>
+<!--      这里为啥有一个ref ？？  -->
       <tab-control :titles="['流行', '新款', '精选']"
                    @tabClick="tabClick"
                    ref="tabControl2"/>
@@ -54,7 +55,7 @@
         banners: [],
         recommends: [],
         goods: {
-          'pop': {page: 0, list: []},
+          'pop': {page: 0, list: []},  // list 则为0至当前page所加载过的所有商品信息；
           'new': {page: 0, list: []},
           'sell': {page: 0, list: []},
         },
@@ -67,6 +68,7 @@
     },
     computed: {
       showGoods() {
+        //内部监听点击
         return this.goods[this.currentType].list
       }
     },
@@ -112,6 +114,7 @@
             this.currentType = 'sell'
             break
         }
+        // 父组件中修改子组件中的属性
         this.$refs.tabControl1.currentIndex = index;
         this.$refs.tabControl2.currentIndex = index;
       },
@@ -143,7 +146,7 @@
       getHomeGoods(type) {
         const page = this.goods[type].page + 1
         getHomeGoods(type, page).then(res => {
-          this.goods[type].list.push(...res.data.list)
+          this.goods[type].list.push(...res.data.list)  //数组追加
           this.goods[type].page += 1
 
           // 完成上拉加载更多
