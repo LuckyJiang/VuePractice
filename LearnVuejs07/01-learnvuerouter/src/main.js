@@ -73,8 +73,8 @@ new Vue({
        }
 
       子组件中，如何获取值：
-      <h2>{{$route.params.abc}}</h2>
-      <h2>{{$route.query.age}}</h2>
+      <h2>{{$route.params.abc}}</h2>  // path后面跟的参数
+      <h2>{{$route.query.age}}</h2>   // query对象中的属性
 
  */
 
@@ -99,7 +99,7 @@ new Vue({
  */
 
 /**
- * 8、keep-alive 是 Vue 内置的一个组件，可以使被包含的组件保留状态，或避免重新渲染。
+ * 8、keep-alive 是 Vue 内置的一个组件，可以使被keep-alive包含的组件保留状态，避免重新渲染。
  *    它们有两个非常重要的属性:
  *    include - 字符串或正则表达，只有匹配的组件会被缓存
  *    exclude - 字符串或正则表达式，任何匹配的组件都不会被缓存

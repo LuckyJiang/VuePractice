@@ -28,6 +28,8 @@
     methods: {
       itemClick(index) {
         this.currentIndex = index;
+        // 触发了 父类的 methods,使用前提：父级组件使用子组件时，需要给子组件绑定”tabClick“的监听时间，使用形式 @tabClick
+        //  <tab-control @tabClick="tabClick" />
         this.$emit('tabClick', index)
       }
     }

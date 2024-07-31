@@ -22,6 +22,8 @@
     },
     methods: {
       imageLoad() {
+        // vue中 $bus 一般与 $emit、 $on、 $off 连用，一般用在 ”任意组件间的通信“ ，即 $bus 用来传递非父子关系的数据。
+        // 这里传递的 子组件与 祖先组件的数据
         this.$bus.$emit('itemImageLoad')
       },
       itemClick() {

@@ -7,7 +7,7 @@
 <body>
 
 <script>
-  // 请求二一:
+  // 请求一:
   // let isResult1 = false
   // let isResult2 = false
   // $ajax({
@@ -36,22 +36,6 @@
 
 
   Promise.all([
-      // new Promise((resolve, reject) => {
-      //   $.ajax({
-      //     url: 'url1',
-      //     success: function (data) {
-      //       resolve(data)
-      //     }
-      //   })
-      // }),
-      // new Promise((resolve, reject) => {
-      //   $.ajax({
-      //     url: 'url2',
-      //     success: function (data) {
-      //       resolve(data)
-      //     }
-      //   })
-      // })
 
     new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -63,7 +47,7 @@
         resolve({name: 'kobe', age: 19})
       }, 1000)
     })
-  ]).then(results => {
+  ]).then(results => {  //数组，[{name: 'why', age: 18},{name: 'kobe', age: 19}]
     console.log(results);
   })
 </script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <!--这里的active,line是变量，如果是字符串的话，需要加上单引号-->
+  <h2 class="title" :class="[active, line]">{{message}}</h2>
+  <h2 class="title" :class="getClasses()">{{message}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  /**
+   * 已数组的形式绑定class，数组中的值为 class的名称，用的比较少
+   */
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好啊',
+      active: 'aaaaaa',
+      line: 'bbbbbbb'
+    },
+    methods: {
+      getClasses: function () {
+        return [this.active, this.line]
+      }
+    }
+  })
+</script>
+
+</body>
+</html>

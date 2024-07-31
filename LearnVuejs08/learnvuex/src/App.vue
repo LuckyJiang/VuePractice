@@ -35,79 +35,79 @@
 </template>
 
 <script>
-import HelloVuex from './components/HelloVuex'
+  import HelloVuex from './components/HelloVuex'
 
-import {
-  INCREMENT
-} from './store/mutations-types'
+  import {
+    INCREMENT
+  } from './store/mutations-types'
 
-export default {
-  name: 'App',
-  components: {
-    HelloVuex
-  },
-  data() {
-    return {
-      message: '我是App组件'
-    }
-  },
-  // computed: {
-  //   more20stu() {
-  //     return this.$store.state.students.filter(s => s.age > 20)
-  //   }
-  // },
-  methods: {
-    addition() {
-      //调用vuex中mutations的方法：
-      this.$store.commit(INCREMENT)
+  export default {
+    name: 'App',
+    components: {
+      HelloVuex
     },
-    subtraction() {
-      this.$store.commit('decrement')
+    data() {
+      return {
+        message: '我是App组件'
+      }
     },
-    addCount(count) {
-      // payload: 负载
-      // 1.普通的提交封装
-      // this.$store.commit('incrementCount', count)
+    // computed: {
+    //   more20stu() {
+    //     return this.$store.state.students.filter(s => s.age > 20)
+    //   }
+    // },
+    methods: {
+      addition() {
+        //调用vuex中mutations的方法：
+        this.$store.commit(INCREMENT)
+      },
+      subtraction() {
+        this.$store.commit('decrement')
+      },
+      addCount(count) {
+        // payload: 负载
+        // 1.普通的提交封装
+        // this.$store.commit('incrementCount', count)
 
-      // 2.特殊的提交封装
-      this.$store.commit({
-        type: 'incrementCount',
-        count
-      })
-    },
-    addStudent() {
-      const stu = {id: 114, name: 'alan', age: 35}
-      this.$store.commit('addStudent', stu)
-    },
-    updateInfo() {
-      // this.$store.commit('updateInfo')
-      // this.$store.dispatch('aUpdateInfo', {
-      //   message: '我是携带的信息',
-      //   success: () => {
-      //     console.log('里面已经完成了');
-      //   }
-      // })
-      this.$store
-        .dispatch('aUpdateInfo', '我是携带的信息')
-        .then(res => {
-          console.log('里面完成了提交');
-          console.log(res);
+        // 2.特殊的提交封装
+        this.$store.commit({
+          type: 'incrementCount',
+          count
         })
-    },
-    updateName() {
-      this.$store.commit('updateName', 'lisi')
-    },
-    asyncUpdateName() {
-      // todo 是所有异步都用dispatch 还是规定 actions中的方法用dispatch
-      this.$store.dispatch('aUpdateName')
+      },
+      addStudent() {
+        const stu = {id: 114, name: 'alan', age: 35}
+        this.$store.commit('addStudent', stu)
+      },
+      updateInfo() {
+        // this.$store.commit('updateInfo')
+        // this.$store.dispatch('aUpdateInfo', {
+        //   message: '我是携带的信息',
+        //   success: () => {
+        //     console.log('里面已经完成了');
+        //   }
+        // })
+        this.$store
+          .dispatch('aUpdateInfo', '我是携带的信息')
+          .then(res => {
+            console.log('里面完成了提交');
+            console.log(res);
+          })
+      },
+      updateName() {
+        this.$store.commit('updateName', 'lisi')
+      },
+      asyncUpdateName() {
+        // todo 是所有异步都用dispatch 还是规定 actions中的方法用dispatch
+        this.$store.dispatch('aUpdateName')
+      }
     }
   }
-}
 </script>
 
 <style>
-.myfont {
-  color: darkred;
-}
+  .myfont {
+    color: darkred;
+  }
 
 </style>

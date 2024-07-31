@@ -8,11 +8,11 @@
 
 <script>
   /**
-   *   Promise是异步编程的一种解决方案
+   *   Promise是异步编程的一种解决方案，用来封装异步操作。
    *
    *   Promise 的使用形式一：
-   *     执行resolve时，会回调.then()
-   *     执行reject时，会回调.catch()
+   *     执行resolve时，会回调.then()：执行所有的then()
+   *     执行reject时，会回调.catch():执行第一个catch();
    */
   // 1.使用setTimeout
   // setTimeout(() => {
@@ -42,10 +42,11 @@
     console.log(err);
   })
 
+  //每个then 会有return 情况 :会链式执行
   new Promise(((resolve, reject) => {
     setTimeout( () =>{
-      // resolve("promise");  // promise then1  ; promise then2
-      reject("promise")   //promise faile1;
+      resolve("promise");  // promise then1  ; promise then1 then2
+      // reject("promise")   //promise faile1;
     },1000)
   })).then( data=>{
     console.log(data + " then1");
@@ -58,6 +59,25 @@
   }).catch(data=>{
     console.log(data + " faile2");
   })
+
+
+  //每个then 没有return 情况 依然可以链式执行then
+  new Promise(((resolve, reject) => {
+    setTimeout( () =>{
+      resolve("then");  // promise then1  ; promise then1 then2
+      // reject("promise")   //promise faile1;
+    },1000)
+  })).then( data=>{
+    console.log(data + " then1");
+  }).then(data=>{
+    console.log(" then2");
+  }).catch(data=>{
+    console.log(data + " faile1");
+  }).catch(data=>{
+    console.log(data + " faile2");
+  })
+
+
 </script>
 </body>
 </html>

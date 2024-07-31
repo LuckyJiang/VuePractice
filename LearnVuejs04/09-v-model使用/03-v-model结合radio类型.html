@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <label for="male">
+    <!--将value属性绑定到v-model上去-->
+    <!--两个v-model绑定的是同一个变量，也可以是互斥的-->
+    <input type="radio" id="male" value="男" v-model="sex">男
+  </label>
+  <label for="female">
+    <input type="radio" id="female" value="女" v-model="sex">女
+  </label>
+  <h2>您选择的性别是: {{sex}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+	/**
+     *  因为是单选：label中的for 要用不用的值表示
+	 */
+	const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好啊',
+      sex: '女'
+    }
+  })
+</script>
+
+</body>
+</html>

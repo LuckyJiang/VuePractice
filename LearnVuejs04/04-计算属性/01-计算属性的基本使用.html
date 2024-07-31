@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <h2>{{firstName + ' ' + lastName}}</h2>
+  <h2>{{firstName}} {{lastName}}</h2>
+  <!--普通方法的调用需要加括号-->
+  <h2>{{getFullName()}}</h2>
+  <!--  调用计算属性，不需要加扣号-->
+  <h2>{{fullName}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  /**
+   * 计算属性 触发时机：只要计算属性中涉及到的变量发生变化，就会自动执行计算属性，也计算属性具有缓存性。
+   *
+   * 调用methods中的方法，方法名称后面加括号
+   * 调用computed 计算属性时，不需要加扣号
+   */
+  const app = new Vue({
+    el: '#app',
+    data: {
+      firstName: 'Lebron',
+      lastName: 'James'
+    },
+    // computed: 计算属性()
+    computed: {
+      fullName: function () {
+        console.log("======")
+        return this.firstName + ' ' + this.lastName
+      }
+    },
+    methods: {
+      getFullName() {
+        return this.firstName + ' ' + this.lastName
+      }
+    }
+  })
+</script>
+
+</body>
+</html>

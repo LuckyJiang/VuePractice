@@ -53,8 +53,8 @@ new Vue({
  *                mutations中传一个参数的时候，跟之前普通传参一样，当传多个参数的时候，则通过payload
  *
  *                          // this.$store.commit('incrementCount', count)
- // 2.特殊的提交封装
- this.$store.commit({
+                            // 2.特殊的提交封装
+                                    this.$store.commit({
                                         type: 'incrementCount',  //type为方法名称
                                         count
                                      })
@@ -86,10 +86,10 @@ new Vue({
  *                  }
  *            使用3：getters接收外部传入的变量，思路：getters的方法返回一个变量
  *                  定义方法：
- moreAgeStu(state) {
+                    moreAgeStu(state) {
                        return age => { return state.students.filter(s => s.age > age) }
                     }
- 使用：$store.getters.moreAgeStu(12) //有人问，为什么这里的方法加上括号了呢，因为这个方法返回的是函数呀.....
+                    使用：$store.getters.moreAgeStu(12) //有人问，为什么这里的方法加上括号了呢，因为这个方法返回的是函数呀.....
  *
  *    modules:随着项目的扩大，state会越来越臃肿，这时候可是让每个module管理一部分state,每个module是一个对象，里面可以定义state,mutations,actions等
  *          使用某个module中的state:  $store.state.a.name  //a 为index.js中某个module的别称
@@ -99,7 +99,7 @@ new Vue({
  *
  *    组件中如何使用：
  *        <h2>{{$store.state.counter}}</h2>
- <h2>{{$store.getters.powerCounter}}</h2>
+          <h2>{{$store.getters.powerCounter}}</h2>
  *
  *    介绍一个组件：devtools:当vuex在mutations中修改state时，这个组件可以记录每个组件对state修改的状态
  *

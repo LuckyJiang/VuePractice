@@ -12,11 +12,10 @@
     <router-link to="/about">关于</router-link>
     <!--<router-link :to="'/user/'+userId">用户</router-link>-->
     <!--&lt;!&ndash;<router-link to="/profile">档案</router-link>&ndash;&gt;-->
-    <!--<router-link :to="{path: '/profile', query: {name: 'why', age: 18, height: 1.88}}">-->
-      <!--档案</router-link>-->
+    <!--<router-link :to="{path: '/profile', query: {name: 'why', age: 18, height: 1.88}}">档案</router-link>-->
     <button @click="userClick">用户</button>
     <button @click="profileClick">档案</button>
-    <!--正则表达式不能加上空格-->
+    <!--正则表达式不能加上空格，Profile,User不会被缓存-->
     <keep-alive exclude="Profile,User">
       <router-view/>
     </keep-alive>

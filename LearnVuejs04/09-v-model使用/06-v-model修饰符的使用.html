@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <!--1.修饰符: lazy  -->
+  <!--v-model。没有修饰符的时候，只要input中的值变化，则message会立马被更新-->
+  <!--如果使用了lazy，则当input失去焦点，或者回车时在去修改message,这样，被修改的次数就变少了-->
+  <input type="text" v-model.lazy="message">
+  <h2>{{message}}</h2>
+
+
+  <!--2.修饰符: number-->
+  <!--默认情况下，会将age，转换为字符串类型，如果加上number修饰符，则将值转为number-->
+  <input type="number" v-model.number="age">
+  <h2>{{age}}-{{typeof age}}</h2>
+
+  <!--3.修饰符: trim-->
+  <!--默认情况下，不会将空格省略（但是在页面中很多人会好奇为什么我看着是去掉的呢？那是因为浏览器显示的时候默认去掉了）
+      如果加上trim修饰符，则不保留空格-->
+  <input type="text" v-model.trim="name">
+  <h2>您输入的名字:{{name}}</h2>
+
+  <button @click="btnClick">按钮</button>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  /**
+   * v-model的修饰符
+   *    1.懒加载：
+   *    2.number:将数据转换为number
+   *    3.trim:加上trim，
+   */
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好啊',
+      age: 0,
+      name: ''
+    },
+    methods: {
+      btnClick(){
+        window.open("https://www.jianshu.com/p/7c8b60fe0981?tab=1", '_blank');
+      }
+    }
+  })
+
+</script>
+
+</body>
+</html>

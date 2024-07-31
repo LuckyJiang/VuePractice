@@ -1,5 +1,6 @@
 <template>
   <tab-bar>
+<!--    //父组件向子组件传入变量 path activeColor-->
     <tab-bar-item path="/home" activeColor="pink">
       <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
       <img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" alt="">

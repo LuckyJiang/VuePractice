@@ -13,7 +13,7 @@ const routes = [
   {
     //路由的默认路径
     path: '',
-    // redirect重定向
+    // redirect重定向指定默认路径
     redirect: '/home'
   },
   {
@@ -37,6 +37,7 @@ const router = new VueRouter({
   mode: 'history',
   //修改vue按钮被选中所加class的名称，
   // 默认情况下，某个<router-link>被点击之后，会给该标签，添加一个名叫router-link-active的class
+  //等价于  active-class="active"
   linkActiveClass: 'active'
 })
 

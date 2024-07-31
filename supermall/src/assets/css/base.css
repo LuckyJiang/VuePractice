@@ -1,6 +1,8 @@
 @import "./normalize.css";
 
-/*:root -> 获取根元素html*/
+/* :root -> 获取根元素html
+  "--XXX":在css中定义变量，之后可以通过 var(--XXX) 给某属性赋值
+*/
 :root {
   --color-text: #666;
   --color-high-text: #ff5777;

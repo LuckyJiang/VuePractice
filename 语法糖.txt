@@ -1,0 +1,10 @@
+1.v-bind: ==> :
+    <img v-bind:src="imgURL" alt="">
+    <img :src="imgURL" alt="">
+
+2.v-on: ==> @
+     <button v-on:click="increment">-</button>
+     <button @click="increment">+</button>
+
+
+******* 依然从vuejichu上跟着视频学习，后期在同步到day04上

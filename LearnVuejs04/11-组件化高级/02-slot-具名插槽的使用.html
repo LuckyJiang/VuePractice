@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <!--父组件中通过slot指定插槽的具名（与slot标签的name一致），来指定需要替换哪个插槽中的内容-->
+  <cpn><span slot="center">标题</span></cpn>
+  <cpn><button slot="left">返回</button></cpn>
+</div>
+
+
+<template id="cpn">
+  <div>
+    <!--给一个插槽标签通过name属性为插槽设置一个名称-->
+    <slot name="left"><span>左边</span></slot>
+    <slot name="center"><span>中间</span></slot>
+    <slot name="right"><span>右边</span></slot>
+    <slot><span>空</span></slot>
+  </div>
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+  /**
+   * 具名插槽：就是给一个插槽标签通过name属性为插槽设置一个名称，方便父组件可以明确要替换哪个插槽
+   *    即，给slot 标签增加一个name属性
+   */
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好啊'
+    },
+    components: {
+      cpn: {
+        template: '#cpn'
+      }
+    }
+  })
+</script>
+
+</body>
+</html>

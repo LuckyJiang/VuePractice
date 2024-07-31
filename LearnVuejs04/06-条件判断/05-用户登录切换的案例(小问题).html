@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--为什么用key？-->
+<!--如果不用key，当我在isUser=true时，向输入框中输入“123”，此时我在点击切换类型按钮，让isUser=false,此时“123”仍然保留在输入框中-->
+<!--如果我想在切换类型时，输入框中的数据也清除，那么可以添加key=“XXX"，用于表示，key所在的标签是否允许复用，key相同可以复用，key不同不可以复用 -->
+<!--为什么切换按钮时，input数据会保留？因为Vue的虚拟dom原理，复用原理。-->
+
+<div id="app">
+  <span v-if="isUser">
+    <label for="username">用户账号</label>
+    <input type="text" id="username" placeholder="用户账号" key="username">
+  </span>
+  <span v-else>
+    <label for="email">用户邮箱</label>
+    <input type="text" id="email" placeholder="用户邮箱" key="email">
+  </span>
+  <button @click="isUser = !isUser">切换类型</button>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+	/**
+     * 小问题---之所为内容保留的原因：
+     *   因为Vue在进行DOM渲染时，出于性能考虑，会尽可能的复用已经存在的元素，而不是重新创建新的元素，这样旧有元素的值就会在新元素中渲染。
+	 */
+	const app = new Vue({
+    el: '#app',
+    data: {
+      isUser: true
+    }
+  })
+</script>
+
+</body>
+</html>

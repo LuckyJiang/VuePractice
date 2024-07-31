@@ -6,6 +6,7 @@
     <router-link to="/home/news">新闻</router-link>
     <router-link to="/home/message">消息</router-link>
 
+    <!--router-view：显示嵌套子组件的内容-->
     <router-view></router-view>
 
     <h2>{{message}}</h2>
@@ -27,7 +28,7 @@
     destroyed() {
       console.log('home destroyed');
     },
-    // 这两个函数, 只有该组件被保持了状态使用了keep-alive时, 才是有效的
+    // activated、deactivated 这两个函数, 只有该组件被keep-alive保持了状态时, 才是有效的
     activated() {
       //保持状态第一步：用keep-alive 包围<router-view/>
       //保持状态第二步：

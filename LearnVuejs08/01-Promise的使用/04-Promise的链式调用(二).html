@@ -7,37 +7,13 @@
 <body>
 
 <script>
-  // 请求一:
-  let isResult1 = false
-  let isResult2 = false
-  /*$ajax({
-    url: '',
-    success: function () {
-      console.log('结果1');
-      isResult1 = true
-      handleResult()
-    }
-  })
-  // 请求二:
-  $ajax({
-    url: '',
-    success: function () {
-      console.log('结果2');
-      isResult2 = true
-      handleResult()
-    }
-  })*/
-
-  function handleResult() {
-    if (isResult1 && isResult2) {
-      //
-    }
-  }
 
   // wrapped into
   // 网络请求: aaa -> 自己处理(10行)
   // 处理: aaa111 -> 自己处理(10行)
   // 处理: aaa111222 -> 自己处理
+
+
   // new Promise((resolve, reject) => {
   //   setTimeout(() => {
   //     resolve('aaa')
@@ -63,7 +39,7 @@
   //   console.log(err);
   // })
 
-  // 优化1：new Promise(resolve => resolve(结果))简写
+  // 优化1：new Promise(resolve => resolve(结果))   简写 成 ===> ： Promise.resolve(data);
   new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('aaa')
@@ -102,6 +78,7 @@
   })
 
 
+
   new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('aaa')
@@ -111,8 +88,8 @@
     console.log(res, '第一层的10行处理代码');
 
     // 2.对结果进行第一次处理
-    // return Promise.reject('error message')
-    throw 'error message'
+    // return Promise.reject('error message')   //终止then的逻辑跳到catch 方式1；
+    throw 'error message'                       //终止then的逻辑跳到catch 方式2：用throw关键字；
   }).then(res => {
     console.log(res, '第二层的10行处理代码');
 
