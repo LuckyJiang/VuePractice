@@ -24,6 +24,7 @@ const state = {
     height: 1.98
   }
 }
+//定义Vuex对象
 const store = new Vuex.Store({
   state,
   mutations,
@@ -38,8 +39,6 @@ const store = new Vuex.Store({
 // 3.导出store独享
 export default store
 
-
-// 对象的解构
 const obj = {
   name: 'why',
   age: 18,
@@ -47,6 +46,7 @@ const obj = {
   address: '洛杉矶'
 }
 
+// 对象的解构
 const {name, height, age} = obj;
 
 
