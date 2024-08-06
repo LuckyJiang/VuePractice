@@ -12,7 +12,7 @@
   <!--为什么要用label?-->
   <!--如果没有label，则想要勾选单选框，必须点击单选框按钮，如果有了label，则点击label的文字，也可以实现勾选单选框按钮的功能-->
   <!--1.通常一个label与一个input在一起使用-->
-  <!--2.label的for要与input的id一致-->
+  <!--2.or属性规定label与哪个表单元素绑定,label的for要与input的id一致-->
   <!--<label for="agree">-->
   <!--<input type="checkbox" id="agree" v-model="isAgree">同意协议-->
   <!--</label>-->
@@ -27,6 +27,7 @@
   <input type="checkbox" value="羽毛球" v-model="hobbies">羽毛球
   <h2>您的爱好是: {{hobbies}}</h2>
 
+  <!--通常一个label与一个input在一起使用,label的for要与input的id一致-->
   <label v-for="item in originHobbies" :for="item">
     <input type="checkbox" :value="item" :id="item" v-model="hobbies">{{item}}
   </label>

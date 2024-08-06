@@ -8,8 +8,8 @@
 
 <div id="app">
   <!--下面两个都实现了双向绑定-->
-  <!--<input type="text" v-model="message">-->
-  <!--<input type="text" :value="message" @input="valueChange">-->
+  <input type="text" v-model="message">
+  <input type="text" :value="message" @input="valueChange">
 
   <!-- :value="message" :单向绑定，当主动修改message的时候，input中的数据会及时响应-->
   <!-- @input="message = $event.target.value":单向绑定，当用户在input中输入值时，及时修改messge值-->
