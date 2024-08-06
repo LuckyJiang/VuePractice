@@ -9,10 +9,6 @@
 <div id="app">
   <cpn></cpn>
   <cpn></cpn>
-
-  <my-cpn></my-cpn>
-  <y-cpn></y-cpn>
-
   <!--通过ref给某一个子组件绑定一个特定的ID-->
   <cpn ref="aaa"></cpn>
   <button @click="btnClick">按钮</button>
@@ -29,8 +25,8 @@
    *    $children:
    *        this.$children是一个数组类型，它包含所有子组件对象，注意这里是组件对象。
    *    $refs的使用：$refs和ref指令通常是一起使用的。
-   *        首先，我们通过ref给某一个子组件绑定一个特定的ID。
-   *        其次，通过this.$refs.ID就可以访问到该组件了。
+   *        首先，适用子组件时，通过ref给某一个子组件绑定一个特定的ID。
+   *        其次，在父组件中，通过this.$refs.ID就可以访问到该组件了。
 
    * 子组件访问父组件，使用$parent
    */
@@ -47,7 +43,7 @@
         //   console.log(c.name);
         //   c.showMessage(); //调用组件的方法
         // }
-        // console.log(this.$children[3].name); //调用组件的某个属性数据
+        // console.log(this.$children[2].name); //调用组件的某个属性数据
 
         // 2.$refs => 对象类型, this.$refs默认是一个空的对象
         // 父组件中，在引入子组件的时候，设置属性：ref='aaa'
